@@ -1,0 +1,78 @@
+{
+  "name": "js-util",
+  "version": "0.0.1",
+  "description": "My node module",
+  "license": "MIT",
+  "repository": "mitevpi/js-util",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Petr Mitev",
+    "email": "p.mitevpi@gmail.com",
+    "url": "https://mitevpi.com/"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "samples"
+  ],
+  "scripts": {
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
+    "postcoverage": "open-cli coverage/lcov-report/index.html",
+    "lint": "eslint .",
+    "flow": "flow check",
+    "docs": "documentation build src/index.js -f md -o docs/README.md && documentation build src/** -f html -o docs",
+    "postdocs": "git add README.md",
+    "clean": "rimraf dist",
+    "flowbuild": "flow-copy-source src dist",
+    "prebuild": "npm run docs && npm run clean && npm run flowbuild",
+    "build": "babel src -d dist",
+    "prerelease": "npm run lint && npm test && npm run build",
+    "release": "standard-version",
+    "postpublish": "git push origin master --follow-tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "verbose": true
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "generator-nod"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-flow": "7.0.0",
+    "babel-eslint": "10.0.2",
+    "babel-jest": "24.8.0",
+    "documentation": "12.1.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-flowtype": "4.2.0",
+    "eslint-plugin-flowtype-errors": "4.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.0",
+    "flow-bin": "0.104.0",
+    "flow-copy-source": "2.0.7",
+    "husky": "3.0.3",
+    "jest": "24.8.0",
+    "lint-staged": "9.2.1",
+    "open-cli": "5.0.0",
+    "prettier": "1.18.2",
+    "rimraf": "2.6.3",
+    "standard-version": "7.0.0"
+  }
+}
