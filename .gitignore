@@ -16,7 +16,7 @@ node_modules
 /.pnp
 .pnp.js
 
-.tgz
+*.tgz
 
 graphData.json
 
