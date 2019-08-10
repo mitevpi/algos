@@ -1,6 +1,6 @@
 export class Objects {
-  static GroupBy(array, key) {
-    return array.reduce((rv, x) => {
+  static GroupBy(xs, key) {
+    return xs.reduce((rv, x) => {
       (rv[x[key]] = rv[x[key]] || []).push(x);
       return rv;
     }, {});

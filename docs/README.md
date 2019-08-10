@@ -9,9 +9,10 @@
     -   [triple][5]
         -   [Parameters][6]
 -   [Arrays][7]
-    -   [Sum][8]
+    -   [GroupBy][8]
         -   [Parameters][9]
--   [Objects][10]
+    -   [Sum][10]
+        -   [Parameters][11]
 
 ## Triple
 
@@ -23,9 +24,9 @@ Triple the number.
 
 #### Parameters
 
--   `n` **[Number][11]** A number to triple.
+-   `n` **[Number][12]** A number to triple.
 
-Returns **[Number][11]** The tripled number.
+Returns **[Number][12]** The tripled number.
 
 ## BiggerTriple
 
@@ -37,13 +38,25 @@ Triple the number twice.
 
 #### Parameters
 
--   `n` **[Number][11]** A number to triple.
+-   `n` **[Number][12]** A number to triple.
 
-Returns **[Number][11]** The bigger tripled number
+Returns **[Number][12]** The bigger tripled number
 
 ## Arrays
 
 Description of Arrays Class.
+
+### GroupBy
+
+Group an array of objects by similar properties.
+
+#### Parameters
+
+-   `array` **[Array][13]** An array of objects with similar properties.
+-   `key`  
+
+Returns **[Object][14]** Object containing child objects which contain the individual
+data points corresponding to the property key used for grouping.
 
 ### Sum
 
@@ -51,13 +64,9 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][12]** A number to triple.
+-   `array` **[Array][13]** A an array of values to sum.
 
-Returns **[Number][11]** The sum of values in the array.
-
-## Objects
-
-Description of Objects Class.
+Returns **[Number][12]** The sum of values in the array.
 
 [1]: #triple
 
@@ -73,12 +82,16 @@ Description of Objects Class.
 
 [7]: #arrays
 
-[8]: #sum
+[8]: #groupby
 
 [9]: #parameters-2
 
-[10]: #objects
+[10]: #sum
 
-[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[11]: #parameters-3
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object

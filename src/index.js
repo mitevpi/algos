@@ -15,8 +15,8 @@ export { BiggerTriple } from "./api/Triple";
  */
 export { Arrays } from "./api/Arrays";
 
-/**
- * Description of Objects Class.
- * @property {Objects}
- */
-export { Objects } from "./api/Objects";
+// /**
+//  * Description of Objects Class.
+//  * @property {Objects}
+//  */
+// export { Objects } from "./api/Objects";

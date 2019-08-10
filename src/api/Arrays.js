@@ -1,4 +1,10 @@
 export class Arrays {
+  /**
+   * Group an array of objects by similar properties.
+   * @param {Array} array An array of objects with similar properties.
+   * @returns {Object} Object containing child objects which contain the individual
+   * data points corresponding to the property key used for grouping.
+   */
   static GroupBy(array, key) {
     return array.reduce((rv, x) => {
       (rv[x[key]] = rv[x[key]] || []).push(x);
@@ -8,7 +14,7 @@ export class Arrays {
 
   /**
    * Sum the values of an array.
-   * @param {Array} array A number to triple.
+   * @param {Array} array A an array of values to sum.
    * @returns {Number} The sum of values in the array.
    */
   static Sum(array) {
