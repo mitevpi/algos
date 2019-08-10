@@ -20,17 +20,7 @@ export { Triple } from "./api/Triple";
  */
 export { BiggerTriple } from "./api/Triple";
 /**
- * Description of Polygon Class.
- * @property {BiggerTriple}
+ * Description of Arrays Class.
+ * @property {Arrays}
  */
-export { Polygon } from "./api/Polygon";
-/**
- * Description of Square Class.
- * @property {Square}
- */
-export { Square } from "./api/Polygon";
-/**
- * Description of Rectangle Class.
- * @property {Rectangle}
- */
-export { Rectangle } from "./api/Polygon";
+export { Arrays } from "./api/Arrays";

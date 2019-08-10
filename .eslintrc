@@ -11,6 +11,7 @@
     "jest": true
   },
   "rules": {
+    "no-param-reassign": "off",
     "flowtype-errors/show-errors": "error",
     "no-console": "off",
     "semi": ["error", "always"],

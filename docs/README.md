@@ -8,15 +8,9 @@
 -   [BiggerTriple][4]
     -   [triple][5]
         -   [Parameters][6]
--   [Polygon][7]
-    -   [sayName][8]
-    -   [sayHistory][9]
--   [Square][10]
-    -   [area][11]
-    -   [area][12]
-        -   [Parameters][13]
--   [Rectangle][14]
-    -   [sayName][15]
+-   [Arrays][7]
+    -   [Sum][8]
+        -   [Parameters][9]
 
 ## Triple
 
@@ -28,9 +22,9 @@ Triple the number.
 
 #### Parameters
 
--   `n` **[Number][16]** A number to triple.
+-   `n` **[Number][10]** A number to triple.
 
-Returns **[Number][16]** The tripled number.
+Returns **[Number][10]** The tripled number.
 
 ## BiggerTriple
 
@@ -42,53 +36,23 @@ Triple the number twice.
 
 #### Parameters
 
--   `n` **[Number][16]** A number to triple.
+-   `n` **[Number][10]** A number to triple.
 
-Returns **[Number][16]** The bigger tripled number
+Returns **[Number][10]** The bigger tripled number
 
-## Polygon
+## Arrays
 
-Description of Polygon Class.
+Description of Arrays Class.
 
-### sayName
+### Sum
 
-Return name.
-
-Returns **[String][17]** Sample string.
-
-### sayHistory
-
-Return height.
-
-Returns **[String][17]** Sample string.
-
-## Square
-
-Description of Square Class.
-
-### area
-
-Return area.
-
-Returns **[Number][16]** The Area.
-
-### area
-
-Set the area to new number
+Sum the values of an array.
 
 #### Parameters
 
--   `value` **[Number][16]** A number to use to set value.
+-   `array` **[Array][11]** A number to triple.
 
-## Rectangle
-
-Description of Rectangle Class.
-
-### sayName
-
-Return name.
-
-Returns **[String][17]** Sample string.
+Returns **[Number][10]** The sum of values in the array.
 
 [1]: #triple
 
@@ -102,24 +66,12 @@ Returns **[String][17]** Sample string.
 
 [6]: #parameters-1
 
-[7]: #polygon
+[7]: #arrays
 
-[8]: #sayname
+[8]: #sum
 
-[9]: #sayhistory
+[9]: #parameters-2
 
-[10]: #square
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[11]: #area
-
-[12]: #area-1
-
-[13]: #parameters-2
-
-[14]: #rectangle
-
-[15]: #sayname-1
-
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
-
-[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
