@@ -11,6 +11,7 @@
 -   [Arrays][7]
     -   [Sum][8]
         -   [Parameters][9]
+-   [Objects][10]
 
 ## Triple
 
@@ -22,9 +23,9 @@ Triple the number.
 
 #### Parameters
 
--   `n` **[Number][10]** A number to triple.
+-   `n` **[Number][11]** A number to triple.
 
-Returns **[Number][10]** The tripled number.
+Returns **[Number][11]** The tripled number.
 
 ## BiggerTriple
 
@@ -36,9 +37,9 @@ Triple the number twice.
 
 #### Parameters
 
--   `n` **[Number][10]** A number to triple.
+-   `n` **[Number][11]** A number to triple.
 
-Returns **[Number][10]** The bigger tripled number
+Returns **[Number][11]** The bigger tripled number
 
 ## Arrays
 
@@ -50,9 +51,13 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][11]** A number to triple.
+-   `array` **[Array][12]** A number to triple.
 
-Returns **[Number][10]** The sum of values in the array.
+Returns **[Number][11]** The sum of values in the array.
+
+## Objects
+
+Description of Objects Class.
 
 [1]: #triple
 
@@ -72,6 +77,8 @@ Returns **[Number][10]** The sum of values in the array.
 
 [9]: #parameters-2
 
-[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[10]: #objects
 
-[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
