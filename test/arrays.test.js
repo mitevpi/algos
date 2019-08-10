@@ -21,3 +21,12 @@ test("Arrays.GroupBy", () => {
   expect(res[13].length).toBe(2);
   expect(res[20].length).toBe(2);
 });
+
+test("Arrays.Summarize", () => {
+  const array2 = ["tom", "peter", "mary", "tom", "mary", "mary", "jeremy"];
+  const res = Arrays.Summarize(array2);
+  expect(res.jeremy).toBe(1);
+  expect(res.mary).toBe(3);
+  expect(res.peter).toBe(1);
+  expect(res.tom).toBe(2);
+});

@@ -13,6 +13,8 @@
         -   [Parameters][9]
     -   [Sum][10]
         -   [Parameters][11]
+    -   [Summarize][12]
+        -   [Parameters][13]
 
 ## Triple
 
@@ -24,9 +26,9 @@ Triple the number.
 
 #### Parameters
 
--   `n` **[Number][12]** A number to triple.
+-   `n` **[Number][14]** A number to triple.
 
-Returns **[Number][12]** The tripled number.
+Returns **[Number][14]** The tripled number.
 
 ## BiggerTriple
 
@@ -38,9 +40,9 @@ Triple the number twice.
 
 #### Parameters
 
--   `n` **[Number][12]** A number to triple.
+-   `n` **[Number][14]** A number to triple.
 
-Returns **[Number][12]** The bigger tripled number
+Returns **[Number][14]** The bigger tripled number
 
 ## Arrays
 
@@ -52,10 +54,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][13]** An array of objects with similar properties.
+-   `array` **[Array][15]&lt;[Object][16]>** An array of objects with similar properties.
 -   `key`  
 
-Returns **[Object][14]** Object containing child objects which contain the individual
+Returns **[Object][16]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### Sum
@@ -64,9 +66,21 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][13]** A an array of values to sum.
+-   `array` **[Array][15]&lt;[Number][14]>** A an array of values to sum.
 
-Returns **[Number][12]** The sum of values in the array.
+Returns **[Number][14]** The sum of values in the array.
+
+### Summarize
+
+Find unique items within the array and count frequency of occurance
+within the array.
+
+#### Parameters
+
+-   `array` **[Array][15]** A an array of values (string, number).
+
+Returns **[Object][16]** Object containing the unique keys of the array, and
+counts of occurance in the source array.
 
 [1]: #triple
 
@@ -90,8 +104,12 @@ Returns **[Number][12]** The sum of values in the array.
 
 [11]: #parameters-3
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[12]: #summarize
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[13]: #parameters-4
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object

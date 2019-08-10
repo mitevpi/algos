@@ -1,7 +1,7 @@
 export class Arrays {
   /**
    * Group an array of objects by similar properties.
-   * @param {Array} array An array of objects with similar properties.
+   * @param {Object[]} array An array of objects with similar properties.
    * @returns {Object} Object containing child objects which contain the individual
    * data points corresponding to the property key used for grouping.
    */
@@ -14,18 +14,25 @@ export class Arrays {
 
   /**
    * Sum the values of an array.
-   * @param {Array} array A an array of values to sum.
+   * @param {Number[]} array A an array of values to sum.
    * @returns {Number} The sum of values in the array.
    */
   static Sum(array) {
     return array.reduce((a, b) => a + b, 0);
   }
 
+  /**
+   * Find unique items within the array and count frequency of occurance
+   * within the array.
+   * @param {Array} array A an array of values (string, number).
+   * @returns {Object} Object containing the unique keys of the array, and
+   * counts of occurance in the source array.
+   */
   static Summarize(array) {
     const returnObj = {};
     array.forEach(p => {
       if (returnObj[p] == null) {
-        returnObj[p] = 0;
+        returnObj[p] = 1;
       } else {
         returnObj[p] = returnObj[p] + 1;
       }
