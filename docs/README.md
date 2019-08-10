@@ -2,47 +2,44 @@
 
 ### Table of Contents
 
--   [Triple][1]
-    -   [triple][2]
+-   [Numbers][1]
+    -   [RandomInt][2]
         -   [Parameters][3]
--   [BiggerTriple][4]
-    -   [triple][5]
-        -   [Parameters][6]
--   [Arrays][7]
-    -   [GroupBy][8]
-        -   [Parameters][9]
-    -   [Sum][10]
-        -   [Parameters][11]
-    -   [Summarize][12]
-        -   [Parameters][13]
+    -   [RandomFloat][4]
+        -   [Parameters][5]
+-   [Arrays][6]
+    -   [GroupBy][7]
+        -   [Parameters][8]
+    -   [Sum][9]
+        -   [Parameters][10]
+    -   [Summarize][11]
+        -   [Parameters][12]
 
-## Triple
+## Numbers
 
-Description of Triple Class.
+Description of Numbers Class.
 
-### triple
+### RandomInt
 
-Triple the number.
-
-#### Parameters
-
--   `n` **[Number][14]** A number to triple.
-
-Returns **[Number][14]** The tripled number.
-
-## BiggerTriple
-
-Description of BiggerTriple Class.
-
-### triple
-
-Triple the number twice.
+Get a random integer between the given range.
 
 #### Parameters
 
--   `n` **[Number][14]** A number to triple.
+-   `min` **[Number][13]** Minimum extent.
+-   `max` **[Number][13]** Maximum extent.
 
-Returns **[Number][14]** The bigger tripled number
+Returns **[Number][13]** The random integer between the min and max input.
+
+### RandomFloat
+
+Get a random float between the given range.
+
+#### Parameters
+
+-   `min` **[Number][13]** Minimum extent.
+-   `max` **[Number][13]** Maximum extent.
+
+Returns **[Number][13]** The random float between the min and max input.
 
 ## Arrays
 
@@ -54,10 +51,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][15]&lt;[Object][16]>** An array of objects with similar properties.
--   `key`  
+-   `array` **[Array][14]&lt;[Object][15]>** An array of objects with similar properties.
+-   `key` **[String][16]** The unique key to group by.
 
-Returns **[Object][16]** Object containing child objects which contain the individual
+Returns **[Object][15]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### Sum
@@ -66,50 +63,50 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][15]&lt;[Number][14]>** A an array of values to sum.
+-   `array` **[Array][14]&lt;[Number][13]>** A an array of values to sum.
 
-Returns **[Number][14]** The sum of values in the array.
+Returns **[Number][13]** The sum of values in the array.
 
 ### Summarize
 
-Find unique items within the array and count frequency of occurance
+Find unique items within the array and count frequency of occurrence
 within the array.
 
 #### Parameters
 
--   `array` **[Array][15]** A an array of values (string, number).
+-   `array` **[Array][14]** A an array of values (string, number).
 
-Returns **[Object][16]** Object containing the unique keys of the array, and
-counts of occurance in the source array.
+Returns **[Object][15]** Object containing the unique keys of the array, and
+counts of occurrence in the source array.
 
-[1]: #triple
+[1]: #numbers
 
-[2]: #triple-1
+[2]: #randomint
 
 [3]: #parameters
 
-[4]: #biggertriple
+[4]: #randomfloat
 
-[5]: #triple-2
+[5]: #parameters-1
 
-[6]: #parameters-1
+[6]: #arrays
 
-[7]: #arrays
+[7]: #groupby
 
-[8]: #groupby
+[8]: #parameters-2
 
-[9]: #parameters-2
+[9]: #sum
 
-[10]: #sum
+[10]: #parameters-3
 
-[11]: #parameters-3
+[11]: #summarize
 
-[12]: #summarize
+[12]: #parameters-4
 
-[13]: #parameters-4
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

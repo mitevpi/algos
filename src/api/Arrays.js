@@ -2,6 +2,7 @@ export class Arrays {
   /**
    * Group an array of objects by similar properties.
    * @param {Object[]} array An array of objects with similar properties.
+   * @param {String} key The unique key to group by.
    * @returns {Object} Object containing child objects which contain the individual
    * data points corresponding to the property key used for grouping.
    */
@@ -22,20 +23,16 @@ export class Arrays {
   }
 
   /**
-   * Find unique items within the array and count frequency of occurance
+   * Find unique items within the array and count frequency of occurrence
    * within the array.
    * @param {Array} array A an array of values (string, number).
    * @returns {Object} Object containing the unique keys of the array, and
-   * counts of occurance in the source array.
+   * counts of occurrence in the source array.
    */
   static Summarize(array) {
     const returnObj = {};
-    array.forEach(p => {
-      if (returnObj[p] == null) {
-        returnObj[p] = 1;
-      } else {
-        returnObj[p] = returnObj[p] + 1;
-      }
+    array.map(p => {
+      returnObj[p] == null ? (returnObj[p] = 1) : (returnObj[p] += 1);
     });
     return returnObj;
   }

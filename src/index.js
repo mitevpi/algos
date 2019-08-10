@@ -1,14 +1,9 @@
 // @flow
 /**
- * Description of Triple Class.
- * @property {Triple}
+ * Description of Numbers Class.
+ * @property {Numbers}
  */
-export { Triple } from "./api/Triple";
-/**
- * Description of BiggerTriple Class.
- * @property {BiggerTriple}
- */
-export { BiggerTriple } from "./api/Triple";
+export { Numbers } from "./api/Numbers";
 /**
  * Description of Arrays Class.
  * @property {Arrays}

@@ -16,6 +16,8 @@ node_modules
 /.pnp
 .pnp.js
 
+.tgz
+
 graphData.json
 
 # testing

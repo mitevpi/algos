@@ -66,9 +66,9 @@
               
                 
                 <li><a
-                  href='#triple'
+                  href='#numbers'
                   class=" toggle-sibling">
-                  Triple
+                  Numbers
                   <span class='icon'>▸</span>
                 </a>
                 
@@ -78,37 +78,15 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#tripletriple'
+                        href='#numbersrandomint'
                         class='regular pre-open'>
-                        .triple
+                        .RandomInt
                       </a></li>
                     
-                    </ul>
-                  
-                  
-                  
-                  
-                </div>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#biggertriple'
-                  class=" toggle-sibling">
-                  BiggerTriple
-                  <span class='icon'>▸</span>
-                </a>
-                
-                <div class='toggle-target display-none'>
-                  
-                  <ul class='list-reset py1-ul pl1'>
-                    <li class='h5'><span>Static members</span></li>
-                    
                       <li><a
-                        href='#biggertripletriple'
+                        href='#numbersrandomfloat'
                         class='regular pre-open'>
-                        .triple
+                        .RandomFloat
                       </a></li>
                     
                     </ul>
@@ -184,7 +162,7 @@
 
   <p>Group an array of objects by similar properties.</p>
 
-    <div class='pre p1 fill-light mt0'>GroupBy(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>, key: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+    <div class='pre p1 fill-light mt0'>GroupBy(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>, key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
   
   
 
@@ -210,8 +188,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>key</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>key</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    The unique key to group by.
+
           </div>
           
         </div>
@@ -329,7 +308,7 @@ data points corresponding to the property key used for grouping.
 
   
 
-  <p>Find unique items within the array and count frequency of occurance
+  <p>Find unique items within the array and count frequency of occurrence
 within the array.</p>
 
     <div class='pre p1 fill-light mt0'>Summarize(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
@@ -366,7 +345,7 @@ within the array.</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
         Object containing the unique keys of the array, and
-counts of occurance in the source array.
+counts of occurrence in the source array.
 
       
     
@@ -407,17 +386,17 @@ counts of occurance in the source array.
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='triple'>
-      Triple
+    <h3 class='fl m0' id='numbers'>
+      Numbers
     </h3>
     
     
   </div>
   
 
-  <p>Description of Triple Class.</p>
+  <p>Description of Numbers Class.</p>
 
-    <div class='pre p1 fill-light mt0'>Triple</div>
+    <div class='pre p1 fill-light mt0'>Numbers</div>
   
   
 
@@ -442,11 +421,11 @@ counts of occurance in the source array.
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
-    <div class='border-bottom' id='tripletriple'>
+    <div class='border-bottom' id='numbersrandomint'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>triple(n)</span>
+            <span class='code strong strong truncate'>RandomInt(min, max)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -454,9 +433,9 @@ counts of occurance in the source array.
 
   
 
-  <p>Triple the number.</p>
+  <p>Get a random integer between the given range.</p>
 
-    <div class='pre p1 fill-light mt0'>triple(n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
+    <div class='pre p1 fill-light mt0'>RandomInt(min: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, max: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
   
   
 
@@ -473,8 +452,17 @@ counts of occurance in the source array.
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
-	    A number to triple.
+            <span class='code bold'>min</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Minimum extent.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>max</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Maximum extent.
 
           </div>
           
@@ -489,7 +477,7 @@ counts of occurance in the source array.
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
-        The tripled number.
+        The random integer between the min and max input.
 
       
     
@@ -511,65 +499,11 @@ counts of occurance in the source array.
       </div>
     </div>
   
-</div>
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='biggertriple'>
-      BiggerTriple
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Description of BiggerTriple Class.</p>
-
-    <div class='pre p1 fill-light mt0'>BiggerTriple</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Static Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='biggertripletriple'>
+    <div class='border-bottom' id='numbersrandomfloat'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>triple(n)</span>
+            <span class='code strong strong truncate'>RandomFloat(min, max)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -577,9 +511,9 @@ counts of occurance in the source array.
 
   
 
-  <p>Triple the number twice.</p>
+  <p>Get a random float between the given range.</p>
 
-    <div class='pre p1 fill-light mt0'>triple(n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
+    <div class='pre p1 fill-light mt0'>RandomFloat(min: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, max: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
   
   
 
@@ -596,8 +530,17 @@ counts of occurance in the source array.
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
-	    A number to triple.
+            <span class='code bold'>min</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Minimum extent.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>max</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Maximum extent.
 
           </div>
           
@@ -612,7 +555,7 @@ counts of occurance in the source array.
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
-        The bigger tripled number
+        The random float between the min and max input.
 
       
     
