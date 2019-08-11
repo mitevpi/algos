@@ -45,7 +45,6 @@ export class Arrays {
   static HierarchyFromFlat(data) {
     const dataMap = data.reduce((map, node) => {
       map[node.name] = node;
-      console.log("MAP", map);
       return map;
     }, {});
 
