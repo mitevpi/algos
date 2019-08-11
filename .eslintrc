@@ -13,6 +13,8 @@
     "jest/globals": true
   },
   "rules": {
+    "array-callback-return": "off",
+    "no-unused-expressions": "off",
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
     "flowtype-errors/show-errors": "error",
