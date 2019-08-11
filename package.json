@@ -26,7 +26,11 @@
     "clean": "rimraf dist",
     "flowbuild": "flow-copy-source src dist",
     "prebuild": "npm run docs && npm run clean && npm run flowbuild",
-    "build": "babel src -d dist",
+    "build": "npm run build:common-js && npm run build:umd && npm run build:umd:min",
+    "build:common-js":"babel src -d dist" ,
+    "build:umd": "node_modules/.bin/rollup src/index.js --file dist/js-util.umd.js --format umd --name js-util",
+    "build:umd:watch": "npm run build:umd -- --watch",
+    "build:umd:min": "node_modules/.bin/rollup src/index.js --file dist/js-util.umd.min.js --format umd --name js-util",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
@@ -57,6 +61,7 @@
     "@babel/preset-flow": "7.0.0",
     "babel-eslint": "10.0.2",
     "babel-jest": "24.8.0",
+    "cross-env": "5.2.0",
     "documentation": "12.1.1",
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -74,6 +79,13 @@
     "open-cli": "5.0.0",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
+    "rollup": "1.19.4",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.0.2",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-replace": "2.2.0",
+    "rollup-plugin-uglify": "6.0.2",
+    "rollup-watch": "4.3.1",
     "standard-version": "7.0.0"
   }
 }
