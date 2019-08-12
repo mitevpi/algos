@@ -11,7 +11,7 @@ Low-level JavaScript algorithms as shorthand for everyday use in frontend & back
 To use this module, install locally using the command below, or clone this repository and import the .js files directly from source.
 
 ```cmd
-npm i @mitevpi/jsutil
+npm i @mitevpi/algos
 ```
 
 ### Imports
@@ -21,12 +21,12 @@ Imports can be done through the aggregating index.js file or via individual memb
 #### Full Import
 
 ```js
-const jsutil = require('./index.js'); // from source
-const jsutil = require('@mitevpi/jsutil') // from npm
+const algos = require('./index.js'); // from source
+const algos = require('@mitevpi/algos') // from npm
 
 // es6
-import * as JsUtil from "../src"; // from source
-import * as JsUtil from from "@mitevpi/jsutil"; // from npm
+import * as Algos from "../src"; // from source
+import * as Algos from from "@mitevpi/algos"; // from npm
 ```
 
 #### Individual Import
@@ -36,9 +36,30 @@ import * as JsUtil from from "@mitevpi/jsutil"; // from npm
 const Arrays = require("./Color");
 const Numbers = require("./Place");
 
-const { Arrays } = require("@mitevpi/jsutil");
-const { Numbers } = require("@mitevpi/jsutil");
-import { Arrays, Numbers } from "@mitevpi/jsutil"; // es6
+const { Arrays } = require("@mitevpi/algos");
+const { Numbers } = require("@mitevpi/algos");
+import { Arrays, Numbers } from "@mitevpi/algos"; // es6
+```
+
+#### CDN
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- import minified script from CDN or copy it locally -->
+    <script src="../dist/algos.umd.min.js"></script> 
+  </head>
+
+  <body>
+    <script>
+      var arr = [1, 2, 3, 4, 5]; // create array
+      var result = algos.Arrays.Sum(arr); // sum the array
+      console.log("LIBRARY", algos); // imported lib object: classes, functions
+      console.log("RESULT", result); // 15
+    </script>
+  </body>
+</html>;
 ```
 
 ## Development
