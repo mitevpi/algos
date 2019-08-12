@@ -33,7 +33,7 @@
     "build:common-js": "babel src -d dist",
     "build:umd": "node_modules/.bin/rollup src/index.js --file dist/js-util.umd.js --format umd --name js-util",
     "build:umd:watch": "npm run build:umd -- --watch",
-    "build:umd:min": "node_modules/.bin/rollup src/index.js --file dist/js-util.umd.min.js --format umd --compact --name js-util",
+    "build:umd:min": "node_modules/.bin/rollup src/index.js --file dist/js-util.umd.min.js --config --format umd --compact --name js-util",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
@@ -87,6 +87,7 @@
     "rimraf": "2.6.3",
     "rollup": "1.19.4",
     "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-babel-minify": "9.0.0",
     "rollup-plugin-commonjs": "10.0.2",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-replace": "2.2.0",
