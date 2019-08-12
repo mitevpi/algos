@@ -1,8 +1,8 @@
 # Algos
 
-[![Generic badge](https://img.shields.io/badge/Docs-Web-Green.svg)](https://mitevpi.github.io/js-util/) [![Generic badge](https://img.shields.io/badge/Docs-MD-Green.svg)](docs/README.md) [![Generic badge](https://img.shields.io/badge/Samples-JS-Green.svg)](samples)
+[![Generic badge](https://img.shields.io/badge/Docs-Web-Green.svg)](https://mitevpi.github.io/algos/) [![Generic badge](https://img.shields.io/badge/Docs-MD-Green.svg)](docs/README.md) [![Generic badge](https://img.shields.io/badge/Samples-JS-Green.svg)](samples)
 
-[![GitHub issues](https://img.shields.io/github/issues/mitevpi/js-util.svg)](https://github.com/mitevpi/js-util/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/js-util.svg)](https://github.com/mitevpi/js-util/commits/master)
+[![GitHub issues](https://img.shields.io/github/issues/mitevpi/algos.svg)](https://github.com/mitevpi/algos/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/algos.svg)](https://github.com/mitevpi/algos/commits/master)
 
 Low-level JavaScript algorithms as shorthand for everyday use in frontend & backend code.
 
@@ -21,6 +21,7 @@ Imports can be done through the aggregating index.js file or via individual memb
 #### Full Import
 
 ```js
+// es5
 const algos = require('./index.js'); // from source
 const algos = require('@mitevpi/algos') // from npm
 
@@ -36,6 +37,7 @@ import * as Algos from from "@mitevpi/algos"; // from npm
 const Arrays = require("./Color");
 const Numbers = require("./Place");
 
+// from npm
 const { Arrays } = require("@mitevpi/algos");
 const { Numbers } = require("@mitevpi/algos");
 import { Arrays, Numbers } from "@mitevpi/algos"; // es6
