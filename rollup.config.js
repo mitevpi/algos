@@ -4,6 +4,7 @@ module.exports = {
   input: "dist/index.js",
   plugins: [
     minify({
+      comments: false
       // Options for babel-minify.
     })
   ]
