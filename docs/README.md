@@ -3,81 +3,110 @@
 ### Table of Contents
 
 -   [Numbers][1]
-    -   [RandomInt][2]
+    -   [randomInt][2]
         -   [Parameters][3]
-    -   [RandomFloat][4]
+    -   [randomFloat][4]
         -   [Parameters][5]
 -   [Arrays][6]
-    -   [GroupBy][7]
+    -   [groupBy][7]
         -   [Parameters][8]
-    -   [Sum][9]
+    -   [sum][9]
         -   [Parameters][10]
-    -   [Summarize][11]
+    -   [summarize][11]
         -   [Parameters][12]
+-   [Strings][13]
+    -   [removeNonPrintable][14]
+        -   [Parameters][15]
+    -   [removeNonPathable][16]
+        -   [Parameters][17]
 
 ## Numbers
 
 Description of Numbers Class.
 
-### RandomInt
+### randomInt
 
 Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][13]** Minimum extent.
--   `max` **[Number][13]** Maximum extent.
+-   `min` **[Number][18]** Minimum extent.
+-   `max` **[Number][18]** Maximum extent.
 
-Returns **[Number][13]** The random integer between the min and max input.
+Returns **[Number][18]** The random integer between the min and max input.
 
-### RandomFloat
+### randomFloat
 
 Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][13]** Minimum extent.
--   `max` **[Number][13]** Maximum extent.
+-   `min` **[Number][18]** Minimum extent.
+-   `max` **[Number][18]** Maximum extent.
 
-Returns **[Number][13]** The random float between the min and max input.
+Returns **[Number][18]** The random float between the min and max input.
 
 ## Arrays
 
 Description of Arrays Class.
 
-### GroupBy
+### groupBy
 
 Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][14]&lt;[Object][15]>** An array of objects with similar properties.
--   `key` **[String][16]** The unique key to group by.
+-   `array` **[Array][19]&lt;[Object][20]>** An array of objects with similar properties.
+-   `key` **[String][21]** The unique key to group by.
 
-Returns **[Object][15]** Object containing child objects which contain the individual
+Returns **[Object][20]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
-### Sum
+### sum
 
 Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][14]&lt;[Number][13]>** A an array of values to sum.
+-   `array` **[Array][19]&lt;[Number][18]>** A an array of values to sum.
 
-Returns **[Number][13]** The sum of values in the array.
+Returns **[Number][18]** The sum of values in the array.
 
-### Summarize
+### summarize
 
 Find unique items within the array and count frequency of occurrence
 within the array.
 
 #### Parameters
 
--   `array` **[Array][14]** A an array of values (string, number).
+-   `array` **[Array][19]** A an array of values (string, number).
 
-Returns **[Object][15]** Object containing the unique keys of the array, and
+Returns **[Object][20]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
+
+## Strings
+
+Description of Objects Class.
+
+### removeNonPrintable
+
+Remove non-printable (non-ASCII) characters from a string.
+
+#### Parameters
+
+-   `str` **[String][21]** The string to clean of non-printable characters.
+
+Returns **[String][21]** String without the non-ASCII characters.
+
+### removeNonPathable
+
+Remove non-pathable characters from a string.
+
+#### Parameters
+
+-   `str` **[String][21]** The string to clean of non-pathable characters.
+
+Returns **[String][21]** String without the path-breaking characters.
 
 [1]: #numbers
 
@@ -103,10 +132,20 @@ counts of occurrence in the source array.
 
 [12]: #parameters-4
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[13]: #strings
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[14]: #removenonprintable
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[15]: #parameters-5
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[16]: #removenonpathable
+
+[17]: #parameters-6
+
+[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

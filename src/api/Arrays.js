@@ -6,7 +6,7 @@ export class Arrays {
    * @returns {Object} Object containing child objects which contain the individual
    * data points corresponding to the property key used for grouping.
    */
-  static GroupBy(array, key) {
+  static groupBy(array, key) {
     return array.reduce((rv, x) => {
       (rv[x[key]] = rv[x[key]] || []).push(x);
       return rv;
@@ -18,7 +18,7 @@ export class Arrays {
    * @param {Number[]} array A an array of values to sum.
    * @returns {Number} The sum of values in the array.
    */
-  static Sum(array) {
+  static sum(array) {
     return array.reduce((a, b) => a + b, 0);
   }
 
@@ -29,7 +29,7 @@ export class Arrays {
    * @returns {Object} Object containing the unique keys of the array, and
    * counts of occurrence in the source array.
    */
-  static Summarize(array) {
+  static summarize(array) {
     const returnObj = {};
     array.map(p => {
       returnObj[p] == null ? (returnObj[p] = 1) : (returnObj[p] += 1);
@@ -42,7 +42,7 @@ export class Arrays {
   //   return parsed.slice(-1).pop();
   // }
 
-  static HierarchyFromFlat(data) {
+  static hierarchyFromFlat(data) {
     const dataMap = data.reduce((map, node) => {
       map[node.name] = node;
       return map;

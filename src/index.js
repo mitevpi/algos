@@ -10,8 +10,8 @@ export { Numbers } from "./api/Numbers";
  */
 export { Arrays } from "./api/Arrays";
 
-// /**
-//  * Description of Objects Class.
-//  * @property {Objects}
-//  */
-// export { Objects } from "./api/Objects";
+/**
+ * Description of Objects Class.
+ * @property {Strings}
+ */
+export { Strings } from "./api/Strings";

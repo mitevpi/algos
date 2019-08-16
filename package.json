@@ -15,8 +15,7 @@
   "files": [
     "dist",
     "src",
-    "README.md",
-    "samples"
+    "README.md"
   ],
   "scripts": {
     "test": "jest",
@@ -25,7 +24,7 @@
     "lint": "eslint .",
     "flow": "flow check",
     "docs": "documentation build src/index.js -f md -o docs/README.md && documentation build src/** -f html -o docs",
-    "postdocs": "git add README.md",
+    "postdocs": "",
     "clean": "rimraf dist",
     "flowbuild": "flow-copy-source src dist",
     "prebuild": "npm run docs && npm run clean && npm run flowbuild",
