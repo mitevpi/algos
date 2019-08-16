@@ -12,17 +12,19 @@
         -   [Parameters][8]
     -   [sum][9]
         -   [Parameters][10]
-    -   [summarize][11]
+    -   [max][11]
         -   [Parameters][12]
--   [Strings][13]
-    -   [checkNull][14]
-        -   [Parameters][15]
-    -   [removeNonPrintable][16]
+    -   [summarize][13]
+        -   [Parameters][14]
+-   [Strings][15]
+    -   [checkNull][16]
         -   [Parameters][17]
-    -   [removeNonPathable][18]
+    -   [removeNonPrintable][18]
         -   [Parameters][19]
-    -   [removeNonAlphaNumberic][20]
+    -   [removeNonPathable][20]
         -   [Parameters][21]
+    -   [removeNonAlphaNumberic][22]
+        -   [Parameters][23]
 
 ## Numbers
 
@@ -34,10 +36,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][22]** Minimum extent.
--   `max` **[Number][22]** Maximum extent.
+-   `min` **[Number][24]** Minimum extent.
+-   `max` **[Number][24]** Maximum extent.
 
-Returns **[Number][22]** The random integer between the min and max input.
+Returns **[Number][24]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -45,10 +47,10 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][22]** Minimum extent.
--   `max` **[Number][22]** Maximum extent.
+-   `min` **[Number][24]** Minimum extent.
+-   `max` **[Number][24]** Maximum extent.
 
-Returns **[Number][22]** The random float between the min and max input.
+Returns **[Number][24]** The random float between the min and max input.
 
 ## Arrays
 
@@ -60,10 +62,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][23]&lt;[Object][24]>** An array of objects with similar properties.
--   `key` **[String][25]** The unique key to group by.
+-   `array` **[Array][25]&lt;[Object][26]>** An array of objects with similar properties.
+-   `key` **[String][27]** The unique key to group by.
 
-Returns **[Object][24]** Object containing child objects which contain the individual
+Returns **[Object][26]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### sum
@@ -72,9 +74,20 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][23]&lt;[Number][22]>** A an array of values to sum.
+-   `array` **[Array][25]&lt;[Number][24]>** A an array of values to sum.
 
-Returns **[Number][22]** The sum of values in the array.
+Returns **[Number][24]** The sum of values in the array.
+
+### max
+
+Get the maximum value in the array.
+
+#### Parameters
+
+-   `arr`  
+-   `array` **[Array][25]&lt;[Number][24]>** A an array of numerical values.
+
+Returns **[Number][24]** The maximum of the values in the array.
 
 ### summarize
 
@@ -83,9 +96,9 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][23]** A an array of values (string, number).
+-   `array` **[Array][25]** A an array of values (string, number).
 
-Returns **[Object][24]** Object containing the unique keys of the array, and
+Returns **[Object][26]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
 
 ## Strings
@@ -98,9 +111,9 @@ Check whether a string is null/empty and return a workable string.
 
 #### Parameters
 
--   `str` **[String][25]** The string to check for null/empty.
+-   `str` **[String][27]** The string to check for null/empty.
 
-Returns **[String][25]** A full or empty string.
+Returns **[String][27]** A full or empty string.
 
 ### removeNonPrintable
 
@@ -108,9 +121,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][25]** The string to clean of non-printable characters.
+-   `str` **[String][27]** The string to clean of non-printable characters.
 
-Returns **[String][25]** String without the non-ASCII characters.
+Returns **[String][27]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -118,9 +131,9 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][25]** The string to clean of non-pathable characters.
+-   `str` **[String][27]** The string to clean of non-pathable characters.
 
-Returns **[String][25]** String without the path-breaking characters.
+Returns **[String][27]** String without the path-breaking characters.
 
 ### removeNonAlphaNumberic
 
@@ -128,9 +141,9 @@ Remove non-alpha-numeric characters from a string.
 
 #### Parameters
 
--   `str` **[String][25]** The string to clean of non-alpha-numeric characters.
+-   `str` **[String][27]** The string to clean of non-alpha-numeric characters.
 
-Returns **[String][25]** String without characters that aren't letters or numbers.
+Returns **[String][27]** String without characters that aren't letters or numbers.
 
 [1]: #numbers
 
@@ -152,32 +165,36 @@ Returns **[String][25]** String without characters that aren't letters or number
 
 [10]: #parameters-3
 
-[11]: #summarize
+[11]: #max
 
 [12]: #parameters-4
 
-[13]: #strings
+[13]: #summarize
 
-[14]: #checknull
+[14]: #parameters-5
 
-[15]: #parameters-5
+[15]: #strings
 
-[16]: #removenonprintable
+[16]: #checknull
 
 [17]: #parameters-6
 
-[18]: #removenonpathable
+[18]: #removenonprintable
 
 [19]: #parameters-7
 
-[20]: #removenonalphanumberic
+[20]: #removenonpathable
 
 [21]: #parameters-8
 
-[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[22]: #removenonalphanumberic
 
-[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[23]: #parameters-9
 
-[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[26]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[27]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

@@ -9,13 +9,16 @@ const object1 = [
   { population: 40, size: 13 }
 ];
 
-const result1 = Arrays.Sum(array1);
-const result2 = Arrays.GroupBy(object1, "size");
-const result3 = Arrays.Summarize(array2);
+const result1 = Arrays.sum(array1);
+const result2 = Arrays.groupBy(object1, "size");
+const result3 = Arrays.summarize(array2);
+const result4 = Arrays.max(array1);
 
 console.log(result1);
 console.log(result2);
+console.log(result3);
+console.log(result4);
 
-console.log(result3);
-console.log(result3);
+console.log(result4);
+
 
