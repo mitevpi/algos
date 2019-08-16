@@ -10,21 +10,27 @@
 -   [Arrays][6]
     -   [groupBy][7]
         -   [Parameters][8]
-    -   [sum][9]
+    -   [sortBy][9]
         -   [Parameters][10]
-    -   [max][11]
+    -   [sum][11]
         -   [Parameters][12]
-    -   [summarize][13]
+    -   [max][13]
         -   [Parameters][14]
--   [Strings][15]
-    -   [checkNull][16]
-        -   [Parameters][17]
-    -   [removeNonPrintable][18]
-        -   [Parameters][19]
-    -   [removeNonPathable][20]
-        -   [Parameters][21]
-    -   [removeNonAlphaNumberic][22]
+    -   [min][15]
+        -   [Parameters][16]
+    -   [summarize][17]
+        -   [Parameters][18]
+    -   [hierarchyFromFlat][19]
+        -   [Parameters][20]
+-   [Strings][21]
+    -   [checkNull][22]
         -   [Parameters][23]
+    -   [removeNonPrintable][24]
+        -   [Parameters][25]
+    -   [removeNonPathable][26]
+        -   [Parameters][27]
+    -   [removeNonAlphaNumberic][28]
+        -   [Parameters][29]
 
 ## Numbers
 
@@ -36,10 +42,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][24]** Minimum extent.
--   `max` **[Number][24]** Maximum extent.
+-   `min` **[Number][30]** Minimum extent.
+-   `max` **[Number][30]** Maximum extent.
 
-Returns **[Number][24]** The random integer between the min and max input.
+Returns **[Number][30]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -47,10 +53,10 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][24]** Minimum extent.
--   `max` **[Number][24]** Maximum extent.
+-   `min` **[Number][30]** Minimum extent.
+-   `max` **[Number][30]** Maximum extent.
 
-Returns **[Number][24]** The random float between the min and max input.
+Returns **[Number][30]** The random float between the min and max input.
 
 ## Arrays
 
@@ -62,11 +68,23 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][25]&lt;[Object][26]>** An array of objects with similar properties.
--   `key` **[String][27]** The unique key to group by.
+-   `array` **[Array][31]&lt;[Object][32]>** An array of objects with similar properties.
+-   `key` **[String][33]** The unique key to group by.
 
-Returns **[Object][26]** Object containing child objects which contain the individual
+Returns **[Object][32]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
+
+### sortBy
+
+Sort an array of objects with similar properties by a shared key's value.
+
+#### Parameters
+
+-   `array` **[Array][31]&lt;[Object][32]>** An array of objects with similar properties.
+-   `key` **[String][33]** The unique key to sort by.
+-   `descending` **[Boolean][34]** Whether to sort descending (default), or ascending. (optional, default `true`)
+
+Returns **[Array][31]&lt;[Object][32]>** Array of objects sorted by the key's value across occurances.
 
 ### sum
 
@@ -74,9 +92,9 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][25]&lt;[Number][24]>** A an array of values to sum.
+-   `array` **[Array][31]&lt;[Number][30]>** A an array of values to sum.
 
-Returns **[Number][24]** The sum of values in the array.
+Returns **[Number][30]** The sum of values in the array.
 
 ### max
 
@@ -84,10 +102,19 @@ Get the maximum value in the array.
 
 #### Parameters
 
--   `arr`  
--   `array` **[Array][25]&lt;[Number][24]>** A an array of numerical values.
+-   `array` **[Array][31]&lt;[Number][30]>** A an array of numerical values.
 
-Returns **[Number][24]** The maximum of the values in the array.
+Returns **[Number][30]** The maximum of the values in the array.
+
+### min
+
+Get the minimum value in the array.
+
+#### Parameters
+
+-   `array` **[Array][31]&lt;[Number][30]>** A an array of numerical values.
+
+Returns **[Number][30]** The minimum of the values in the array.
 
 ### summarize
 
@@ -96,10 +123,24 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][25]** A an array of values (string, number).
+-   `array` **[Array][31]** A an array of values (string, number).
 
-Returns **[Object][26]** Object containing the unique keys of the array, and
+Returns **[Object][32]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
+
+### hierarchyFromFlat
+
+Turn a flat array of objects containing common properties into a nested object
+hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
+
+#### Parameters
+
+-   `array` **[Array][31]&lt;[Object][32]>** A an array of objects.
+-   `parentKey` **[String][33]** The common property of the objects to establish primary identity.
+-   `childKey` **[String][33]** The common property of the objects to establish parent -> child relationships.
+
+Returns **[Array][31]&lt;[Object][32]>** An array of objects, nested using the .children accessor based on the
+parent -> child hierarchy established.
 
 ## Strings
 
@@ -111,9 +152,9 @@ Check whether a string is null/empty and return a workable string.
 
 #### Parameters
 
--   `str` **[String][27]** The string to check for null/empty.
+-   `str` **[String][33]** The string to check for null/empty.
 
-Returns **[String][27]** A full or empty string.
+Returns **[String][33]** A full or empty string.
 
 ### removeNonPrintable
 
@@ -121,9 +162,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][27]** The string to clean of non-printable characters.
+-   `str` **[String][33]** The string to clean of non-printable characters.
 
-Returns **[String][27]** String without the non-ASCII characters.
+Returns **[String][33]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -131,9 +172,9 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][27]** The string to clean of non-pathable characters.
+-   `str` **[String][33]** The string to clean of non-pathable characters.
 
-Returns **[String][27]** String without the path-breaking characters.
+Returns **[String][33]** String without the path-breaking characters.
 
 ### removeNonAlphaNumberic
 
@@ -141,9 +182,9 @@ Remove non-alpha-numeric characters from a string.
 
 #### Parameters
 
--   `str` **[String][27]** The string to clean of non-alpha-numeric characters.
+-   `str` **[String][33]** The string to clean of non-alpha-numeric characters.
 
-Returns **[String][27]** String without characters that aren't letters or numbers.
+Returns **[String][33]** String without characters that aren't letters or numbers.
 
 [1]: #numbers
 
@@ -161,40 +202,54 @@ Returns **[String][27]** String without characters that aren't letters or number
 
 [8]: #parameters-2
 
-[9]: #sum
+[9]: #sortby
 
 [10]: #parameters-3
 
-[11]: #max
+[11]: #sum
 
 [12]: #parameters-4
 
-[13]: #summarize
+[13]: #max
 
 [14]: #parameters-5
 
-[15]: #strings
+[15]: #min
 
-[16]: #checknull
+[16]: #parameters-6
 
-[17]: #parameters-6
+[17]: #summarize
 
-[18]: #removenonprintable
+[18]: #parameters-7
 
-[19]: #parameters-7
+[19]: #hierarchyfromflat
 
-[20]: #removenonpathable
+[20]: #parameters-8
 
-[21]: #parameters-8
+[21]: #strings
 
-[22]: #removenonalphanumberic
+[22]: #checknull
 
 [23]: #parameters-9
 
-[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[24]: #removenonprintable
 
-[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[25]: #parameters-10
 
-[26]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[26]: #removenonpathable
 
-[27]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[27]: #parameters-11
+
+[28]: #removenonalphanumberic
+
+[29]: #parameters-12
+
+[30]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[31]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[32]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[33]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[34]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean

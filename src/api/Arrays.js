@@ -14,6 +14,24 @@ export class Arrays {
   }
 
   /**
+   * Sort an array of objects with similar properties by a shared key's value.
+   * @param {Object[]} array An array of objects with similar properties.
+   * @param {String} key The unique key to sort by.
+   * @param {Boolean} descending Whether to sort descending (default), or ascending.
+   * @returns {Object[]} Array of objects sorted by the key's value across occurances.
+   */
+  static sortBy(array, key, descending = true) {
+    return array.sort((a, b) => {
+      switch (descending) {
+        case false:
+          return a[key] - b[key];
+        default:
+          return b[key] - a[key];
+      }
+    });
+  }
+
+  /**
    * Sum the values of an array.
    * @param {Number[]} array A an array of values to sum.
    * @returns {Number} The sum of values in the array.
@@ -74,17 +92,26 @@ export class Arrays {
   //   return parsed.slice(-1).pop();
   // }
 
-  static hierarchyFromFlat(data) {
-    const dataMap = data.reduce((map, node) => {
-      map[node.name] = node;
+  /**
+   * Turn a flat array of objects containing common properties into a nested object
+   * hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
+   * @param {Object[]} array A an array of objects.
+   * @param {String} parentKey The common property of the objects to establish primary identity.
+   * @param {String} childKey The common property of the objects to establish parent -> child relationships.
+   * @returns {Object[]} An array of objects, nested using the .children accessor based on the
+   * parent -> child hierarchy established.
+   */
+  static hierarchyFromFlat(array, parentKey, childKey) {
+    const dataMap = array.reduce((map, node) => {
+      map[node[childKey]] = node;
       return map;
     }, {});
 
     // create the tree array
     const treeData = [];
-    data.forEach(node => {
+    array.forEach(node => {
       // add to parent
-      const parent = dataMap[node.parent];
+      const parent = dataMap[node[parentKey]];
       if (parent) {
         // create child array if it doesn't exist
         (parent.children || (parent.children = []))
