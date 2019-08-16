@@ -1,4 +1,9 @@
 export class Strings {
+  /**
+   * Check whether a string is null/empty and return a workable string.
+   * @param {String} str The string to check for null/empty.
+   * @returns {String} A full or empty string.
+   */
   static checkNull(str) {
     if (str === null || str === "") {
       return "";
