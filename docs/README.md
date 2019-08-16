@@ -19,6 +19,8 @@
         -   [Parameters][15]
     -   [removeNonPathable][16]
         -   [Parameters][17]
+    -   [removeNonAlphaNumberic][18]
+        -   [Parameters][19]
 
 ## Numbers
 
@@ -30,10 +32,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][18]** Minimum extent.
--   `max` **[Number][18]** Maximum extent.
+-   `min` **[Number][20]** Minimum extent.
+-   `max` **[Number][20]** Maximum extent.
 
-Returns **[Number][18]** The random integer between the min and max input.
+Returns **[Number][20]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -41,10 +43,10 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][18]** Minimum extent.
--   `max` **[Number][18]** Maximum extent.
+-   `min` **[Number][20]** Minimum extent.
+-   `max` **[Number][20]** Maximum extent.
 
-Returns **[Number][18]** The random float between the min and max input.
+Returns **[Number][20]** The random float between the min and max input.
 
 ## Arrays
 
@@ -56,10 +58,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][19]&lt;[Object][20]>** An array of objects with similar properties.
--   `key` **[String][21]** The unique key to group by.
+-   `array` **[Array][21]&lt;[Object][22]>** An array of objects with similar properties.
+-   `key` **[String][23]** The unique key to group by.
 
-Returns **[Object][20]** Object containing child objects which contain the individual
+Returns **[Object][22]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### sum
@@ -68,9 +70,9 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][19]&lt;[Number][18]>** A an array of values to sum.
+-   `array` **[Array][21]&lt;[Number][20]>** A an array of values to sum.
 
-Returns **[Number][18]** The sum of values in the array.
+Returns **[Number][20]** The sum of values in the array.
 
 ### summarize
 
@@ -79,9 +81,9 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][19]** A an array of values (string, number).
+-   `array` **[Array][21]** A an array of values (string, number).
 
-Returns **[Object][20]** Object containing the unique keys of the array, and
+Returns **[Object][22]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
 
 ## Strings
@@ -94,9 +96,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][21]** The string to clean of non-printable characters.
+-   `str` **[String][23]** The string to clean of non-printable characters.
 
-Returns **[String][21]** String without the non-ASCII characters.
+Returns **[String][23]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -104,9 +106,19 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][21]** The string to clean of non-pathable characters.
+-   `str` **[String][23]** The string to clean of non-pathable characters.
 
-Returns **[String][21]** String without the path-breaking characters.
+Returns **[String][23]** String without the path-breaking characters.
+
+### removeNonAlphaNumberic
+
+Remove non-alpha-numeric characters from a string.
+
+#### Parameters
+
+-   `str` **[String][23]** The string to clean of non-alpha-numeric characters.
+
+Returns **[String][23]** String without characters that aren't letters or numbers.
 
 [1]: #numbers
 
@@ -142,10 +154,14 @@ Returns **[String][21]** String without the path-breaking characters.
 
 [17]: #parameters-6
 
-[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[18]: #removenonalphanumberic
 
-[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[19]: #parameters-7
 
-[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
