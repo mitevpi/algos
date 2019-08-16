@@ -1,6 +1,6 @@
 {
   "name": "@mitevpi/algos",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Low-level algorithms for data processing and manipulation.",
   "license": "MIT",
   "repository": "mitevpi/algos",
@@ -27,13 +27,13 @@
     "postdocs": "",
     "clean": "rimraf dist",
     "flowbuild": "flow-copy-source src dist",
-    "prebuild": "npm run docs && npm run clean && npm run flowbuild",
+    "prebuild": "npm run clean && npm run flowbuild",
     "build": "npm run build:common-js && npm run build:umd && npm run build:umd:min",
     "build:common-js": "babel src -d dist",
     "build:umd": "node_modules/.bin/rollup src/index.js --file dist/algos.umd.js --format umd --name algos",
     "build:umd:watch": "npm run build:umd -- --watch",
     "build:umd:min": "node_modules/.bin/rollup src/index.js --file dist/algos.umd.min.js --config --format umd --compact --name algos",
-    "prerelease": "npm run lint && npm test && npm run build",
+    "prerelease": "npm run lint && npm test && npm run build && npm run docs",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
   },
