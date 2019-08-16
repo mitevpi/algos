@@ -56,7 +56,7 @@ import { Arrays, Numbers } from "@mitevpi/algos"; // es6
   <body>
     <script>
       var arr = [1, 2, 3, 4, 5]; // create array
-      var result = algos.Arrays.Sum(arr); // sum the array
+      var result = algos.Arrays.sum(arr); // sum the array
       console.log("LIBRARY", algos); // imported lib object: classes, functions
       console.log("RESULT", result); // 15
     </script>
