@@ -4,6 +4,10 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/mitevpi/algos.svg)](https://github.com/mitevpi/algos/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/algos.svg)](https://github.com/mitevpi/algos/commits/master)
 
+[![npm](https://img.shields.io/npm/v/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos) [![npm bundle size](https://img.shields.io/bundlephobia/min/@mitevpi/algos.svg)](https://bundlephobia.com/result?p=@mitevpi/algos) [![npm](https://img.shields.io/npm/dw/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos) [![npm2](https://img.shields.io/npm/dt/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos)
+
+[![GitHub issues](https://img.shields.io/github/issues/mitevpi/algos.svg)](https://github.com/mitevpi/algos/issues) ![David](https://img.shields.io/david/dev/mitevpi/algos.svg) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/algos.svg)](https://github.com/mitevpi/algos/commits/master)
+
 Low-level JavaScript algorithms as shorthand for everyday use in frontend & backend code.
 
 ## Usage
