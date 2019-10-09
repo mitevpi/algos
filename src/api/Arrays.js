@@ -87,10 +87,22 @@ export class Arrays {
     return returnObj;
   }
 
-  // static parseFileType(name) {
-  //   const parsed = name.split(".");
-  //   return parsed.slice(-1).pop();
-  // }
+  /**
+   * Flattens n-nested arrays into one array of values.
+   * @param {Array} array A an array containing arrays nested to any amount (n).
+   * @returns {Array} A flat array of values/objects extracted from the nested arrays.
+   */
+  static flatten(arr, result = []) {
+    for (let i = 0, { length } = arr; i < length; i++) {
+      const value = arr[i];
+      if (Array.isArray(value)) {
+        this.flatten(value, result);
+      } else {
+        result.push(value);
+      }
+    }
+    return result;
+  }
 
   /**
    * Turn a flat array of objects containing common properties into a nested object
