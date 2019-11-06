@@ -52,6 +52,18 @@ test("ArraysObjective.normalizeByKeys", () => {
   expect(res[3].size).toBe(0);
 });
 
+test("ArraysObjective.normalizeAuto", () => {
+  const res = ArraysObjective.normalizeAuto(states);
+  expect(res[0].population).toBe(0);
+  expect(res[1].population).toBe(0.2);
+  expect(res[2].population).toBe(1);
+  expect(res[3].population).toBe(0.6);
+  expect(res[0].size).toBe(0);
+  expect(res[1].size).toBe(1);
+  expect(res[2].size).toBe(1);
+  expect(res[3].size).toBe(0);
+});
+
 test("ArraysObjective.sortBy", () => {
   const res = ArraysObjective.sortBy(states, "size", false);
   expect(res[0].state).toBe("OH");

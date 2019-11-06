@@ -98,6 +98,36 @@ export class ArraysObjective extends Arrays {
   }
 
   /**
+   * Normalize all the values in an object array associated with keys which have numerical value pairs
+   * between 0 and 1 based on the minimums and maxiums contained in the object array by those keys.
+   * @param {Array} array A an array containing objects.
+   * @returns {Array} The modified object array.
+   */
+  static normalizeAuto(array) {
+    const keys = Object.keys(array[0]);
+    const newKeys = [];
+
+    keys.map(key => {
+      if (Number.isNaN(+array[0][key])) {
+        // nothing
+      } else {
+        newKeys.push(key);
+      }
+    });
+
+    newKeys.map(key => {
+      const max = this.max(array, key);
+      const min = this.min(array, key);
+
+      array.map(obj => {
+        obj[key] = Numbers.normalize(+obj[key], min, max);
+      });
+    });
+
+    return array;
+  }
+
+  /**
    * Turn a flat array of objects containing common properties into a nested object
    * hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
    * @param {Object[]} array A an array of objects.
