@@ -1,4 +1,4 @@
-import { Arrays } from "../src";
+import { Arrays, ArraysNumerical, ArraysObjective } from "../src";
 
 const dirtyArray = [-1, 1, 2, "a string;", { hi: 1 }, 3, 4, 5, 6, 12, 0, -0];
 
@@ -15,28 +15,28 @@ test("import Arrays", () => {
 
 test("Arrays.sum", () => {
   const ar = [1, 2, 3, 4, 5, 6];
-  const res = Arrays.sum(ar);
+  const res = ArraysNumerical.sum(ar);
   expect(res).toBe(21);
 });
 
 test("Arrays.max", () => {
-  const res = Arrays.max(dirtyArray);
+  const res = ArraysNumerical.max(dirtyArray);
   expect(res).toBe(12);
 });
 
 test("Arrays.min", () => {
-  const res = Arrays.min(dirtyArray);
+  const res = ArraysNumerical.min(dirtyArray);
   expect(res).toBe(-1);
 });
 
 test("Arrays.groupBy", () => {
-  const res = Arrays.groupBy(states, "size");
+  const res = ArraysObjective.groupBy(states, "size");
   expect(res[13].length).toBe(2);
   expect(res[20].length).toBe(2);
 });
 
 test("Arrays.sortBy", () => {
-  const res = Arrays.sortBy(states, "size", false);
+  const res = ArraysObjective.sortBy(states, "size", false);
   expect(res[0].state).toBe("OH");
   expect(res[1].state).toBe("PA");
   expect(res[2].state).toBe("KY");

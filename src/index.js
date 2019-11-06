@@ -1,17 +1,26 @@
 // @flow
 /**
- * Description of Numbers Class.
+ * Class for working with numbers and numerical data.
  * @property {Numbers}
  */
 export { Numbers } from "./api/Numbers";
 /**
- * Description of Arrays Class.
+ * Class for working with arrays of any types
  * @property {Arrays}
  */
 export { Arrays } from "./api/Arrays";
-
 /**
- * Description of Objects Class.
+ * Class for working with arrays containing objects with key/value data.
+ * @property {ArraysObjective}
+ */
+export { ArraysObjective } from "./api/ArraysObjective";
+/**
+ * Class for working with arrays containing numbers and numerical data.
+ * @property {ArraysNumerical}
+ */
+export { ArraysNumerical } from "./api/ArraysNumerical";
+/**
+ * Class for working with string data.
  * @property {Strings}
  */
 export { Strings } from "./api/Strings";

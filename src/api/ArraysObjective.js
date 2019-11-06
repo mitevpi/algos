@@ -1,6 +1,6 @@
 import { Arrays } from "./Arrays";
 
-export class ArraysObject extends Arrays {
+export class ArraysObjective extends Arrays {
   /**
    * Group an array of objects by similar properties.
    * @param {Object[]} array An array of objects with similar properties.

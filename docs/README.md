@@ -8,35 +8,37 @@
     -   [randomFloat][4]
         -   [Parameters][5]
 -   [Arrays][6]
-    -   [groupBy][7]
+    -   [summarize][7]
         -   [Parameters][8]
-    -   [sortBy][9]
+    -   [flatten][9]
         -   [Parameters][10]
-    -   [sum][11]
-        -   [Parameters][12]
-    -   [max][13]
-        -   [Parameters][14]
-    -   [min][15]
-        -   [Parameters][16]
-    -   [summarize][17]
-        -   [Parameters][18]
-    -   [flatten][19]
+-   [ArraysObjective][11]
+    -   [groupBy][12]
+        -   [Parameters][13]
+    -   [sortBy][14]
+        -   [Parameters][15]
+    -   [hierarchyFromFlat][16]
+        -   [Parameters][17]
+-   [ArraysNumerical][18]
+    -   [sum][19]
         -   [Parameters][20]
-    -   [hierarchyFromFlat][21]
+    -   [max][21]
         -   [Parameters][22]
--   [Strings][23]
-    -   [checkNull][24]
-        -   [Parameters][25]
-    -   [removeNonPrintable][26]
+    -   [min][23]
+        -   [Parameters][24]
+-   [Strings][25]
+    -   [checkNull][26]
         -   [Parameters][27]
-    -   [removeNonPathable][28]
+    -   [removeNonPrintable][28]
         -   [Parameters][29]
-    -   [removeNonAlphaNumberic][30]
+    -   [removeNonPathable][30]
         -   [Parameters][31]
+    -   [removeNonAlphaNumberic][32]
+        -   [Parameters][33]
 
 ## Numbers
 
-Description of Numbers Class.
+Class for working with numbers and numerical data.
 
 ### randomInt
 
@@ -44,10 +46,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][32]** Minimum extent.
--   `max` **[Number][32]** Maximum extent.
+-   `min` **[Number][34]** Minimum extent.
+-   `max` **[Number][34]** Maximum extent.
 
-Returns **[Number][32]** The random integer between the min and max input.
+Returns **[Number][34]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -55,68 +57,14 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][32]** Minimum extent.
--   `max` **[Number][32]** Maximum extent.
+-   `min` **[Number][34]** Minimum extent.
+-   `max` **[Number][34]** Maximum extent.
 
-Returns **[Number][32]** The random float between the min and max input.
+Returns **[Number][34]** The random float between the min and max input.
 
 ## Arrays
 
-Description of Arrays Class.
-
-### groupBy
-
-Group an array of objects by similar properties.
-
-#### Parameters
-
--   `array` **[Array][33]&lt;[Object][34]>** An array of objects with similar properties.
--   `key` **[String][35]** The unique key to group by.
-
-Returns **[Object][34]** Object containing child objects which contain the individual
-data points corresponding to the property key used for grouping.
-
-### sortBy
-
-Sort an array of objects with similar properties by a shared key's value.
-
-#### Parameters
-
--   `array` **[Array][33]&lt;[Object][34]>** An array of objects with similar properties.
--   `key` **[String][35]** The unique key to sort by.
--   `descending` **[Boolean][36]** Whether to sort descending (default), or ascending. (optional, default `true`)
-
-Returns **[Array][33]&lt;[Object][34]>** Array of objects sorted by the key's value across occurances.
-
-### sum
-
-Sum the values of an array.
-
-#### Parameters
-
--   `array` **[Array][33]&lt;[Number][32]>** A an array of values to sum.
-
-Returns **[Number][32]** The sum of values in the array.
-
-### max
-
-Get the maximum value in the array.
-
-#### Parameters
-
--   `array` **[Array][33]&lt;[Number][32]>** A an array of numerical values.
-
-Returns **[Number][32]** The maximum of the values in the array.
-
-### min
-
-Get the minimum value in the array.
-
-#### Parameters
-
--   `array` **[Array][33]&lt;[Number][32]>** A an array of numerical values.
-
-Returns **[Number][32]** The minimum of the values in the array.
+Class for working with arrays of any types
 
 ### summarize
 
@@ -125,9 +73,9 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][33]** A an array of values (string, number).
+-   `array` **[Array][35]** A an array of values (string, number).
 
-Returns **[Object][34]** Object containing the unique keys of the array, and
+Returns **[Object][36]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
 
 ### flatten
@@ -138,9 +86,37 @@ Flattens n-nested arrays into one array of values.
 
 -   `arr`  
 -   `result`   (optional, default `[]`)
--   `array` **[Array][33]** A an array containing arrays nested to any amount (n).
+-   `array` **[Array][35]** A an array containing arrays nested to any amount (n).
 
-Returns **[Array][33]** A flat array of values/objects extracted from the nested arrays.
+Returns **[Array][35]** A flat array of values/objects extracted from the nested arrays.
+
+## ArraysObjective
+
+Class for working with arrays containing objects with key/value data.
+
+### groupBy
+
+Group an array of objects by similar properties.
+
+#### Parameters
+
+-   `array` **[Array][35]&lt;[Object][36]>** An array of objects with similar properties.
+-   `key` **[String][37]** The unique key to group by.
+
+Returns **[Object][36]** Object containing child objects which contain the individual
+data points corresponding to the property key used for grouping.
+
+### sortBy
+
+Sort an array of objects with similar properties by a shared key's value.
+
+#### Parameters
+
+-   `array` **[Array][35]&lt;[Object][36]>** An array of objects with similar properties.
+-   `key` **[String][37]** The unique key to sort by.
+-   `descending` **[Boolean][38]** Whether to sort descending (default), or ascending. (optional, default `true`)
+
+Returns **[Array][35]&lt;[Object][36]>** Array of objects sorted by the key's value across occurances.
 
 ### hierarchyFromFlat
 
@@ -149,16 +125,50 @@ hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
 
 #### Parameters
 
--   `array` **[Array][33]&lt;[Object][34]>** A an array of objects.
--   `parentKey` **[String][35]** The common property of the objects to establish primary identity.
--   `childKey` **[String][35]** The common property of the objects to establish parent -> child relationships.
+-   `array` **[Array][35]&lt;[Object][36]>** A an array of objects.
+-   `parentKey` **[String][37]** The common property of the objects to establish primary identity.
+-   `childKey` **[String][37]** The common property of the objects to establish parent -> child relationships.
 
-Returns **[Array][33]&lt;[Object][34]>** An array of objects, nested using the .children accessor based on the
+Returns **[Array][35]&lt;[Object][36]>** An array of objects, nested using the .children accessor based on the
 parent -> child hierarchy established.
+
+## ArraysNumerical
+
+Class for working with arrays containing numbers and numerical data.
+
+### sum
+
+Sum the values of an array.
+
+#### Parameters
+
+-   `array` **[Array][35]&lt;[Number][34]>** A an array of values to sum.
+
+Returns **[Number][34]** The sum of values in the array.
+
+### max
+
+Get the maximum value in the array.
+
+#### Parameters
+
+-   `array` **[Array][35]&lt;[Number][34]>** A an array of numerical values.
+
+Returns **[Number][34]** The maximum of the values in the array.
+
+### min
+
+Get the minimum value in the array.
+
+#### Parameters
+
+-   `array` **[Array][35]&lt;[Number][34]>** A an array of numerical values.
+
+Returns **[Number][34]** The minimum of the values in the array.
 
 ## Strings
 
-Description of Objects Class.
+Class for working with string data.
 
 ### checkNull
 
@@ -166,9 +176,9 @@ Check whether a string is null/empty and return a workable string.
 
 #### Parameters
 
--   `str` **[String][35]** The string to check for null/empty.
+-   `str` **[String][37]** The string to check for null/empty.
 
-Returns **[String][35]** A full or empty string.
+Returns **[String][37]** A full or empty string.
 
 ### removeNonPrintable
 
@@ -176,9 +186,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][35]** The string to clean of non-printable characters.
+-   `str` **[String][37]** The string to clean of non-printable characters.
 
-Returns **[String][35]** String without the non-ASCII characters.
+Returns **[String][37]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -186,9 +196,9 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][35]** The string to clean of non-pathable characters.
+-   `str` **[String][37]** The string to clean of non-pathable characters.
 
-Returns **[String][35]** String without the path-breaking characters.
+Returns **[String][37]** String without the path-breaking characters.
 
 ### removeNonAlphaNumberic
 
@@ -196,9 +206,9 @@ Remove non-alpha-numeric characters from a string.
 
 #### Parameters
 
--   `str` **[String][35]** The string to clean of non-alpha-numeric characters.
+-   `str` **[String][37]** The string to clean of non-alpha-numeric characters.
 
-Returns **[String][35]** String without characters that aren't letters or numbers.
+Returns **[String][37]** String without characters that aren't letters or numbers.
 
 [1]: #numbers
 
@@ -212,62 +222,66 @@ Returns **[String][35]** String without characters that aren't letters or number
 
 [6]: #arrays
 
-[7]: #groupby
+[7]: #summarize
 
 [8]: #parameters-2
 
-[9]: #sortby
+[9]: #flatten
 
 [10]: #parameters-3
 
-[11]: #sum
+[11]: #arraysobjective
 
-[12]: #parameters-4
+[12]: #groupby
 
-[13]: #max
+[13]: #parameters-4
 
-[14]: #parameters-5
+[14]: #sortby
 
-[15]: #min
+[15]: #parameters-5
 
-[16]: #parameters-6
+[16]: #hierarchyfromflat
 
-[17]: #summarize
+[17]: #parameters-6
 
-[18]: #parameters-7
+[18]: #arraysnumerical
 
-[19]: #flatten
+[19]: #sum
 
-[20]: #parameters-8
+[20]: #parameters-7
 
-[21]: #hierarchyfromflat
+[21]: #max
 
-[22]: #parameters-9
+[22]: #parameters-8
 
-[23]: #strings
+[23]: #min
 
-[24]: #checknull
+[24]: #parameters-9
 
-[25]: #parameters-10
+[25]: #strings
 
-[26]: #removenonprintable
+[26]: #checknull
 
-[27]: #parameters-11
+[27]: #parameters-10
 
-[28]: #removenonpathable
+[28]: #removenonprintable
 
-[29]: #parameters-12
+[29]: #parameters-11
 
-[30]: #removenonalphanumberic
+[30]: #removenonpathable
 
-[31]: #parameters-13
+[31]: #parameters-12
 
-[32]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[32]: #removenonalphanumberic
 
-[33]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[33]: #parameters-13
 
-[34]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[34]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[35]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[35]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[36]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[36]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[37]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[38]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
