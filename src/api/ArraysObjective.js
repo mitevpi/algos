@@ -1,4 +1,5 @@
 import { Arrays } from "./Arrays";
+import { Numbers } from "./Numbers";
 
 export class ArraysObjective extends Arrays {
   /**
@@ -31,6 +32,69 @@ export class ArraysObjective extends Arrays {
           return b[key] - a[key];
       }
     });
+  }
+
+  /**
+   * Get the mininum value of a key in an array containg objects with that key.
+   * @param {Array} array A an array containing objects.
+   * @param {String} key A key which exists in the objects in the array, with associated numerical values.
+   * @returns {Number} The minium value of all the keys in the object array.
+   */
+  static min(array, key) {
+    return array.reduce(
+      (min, p) => (+p[key] < min ? +p[key] : min),
+      +array[0][key]
+    );
+  }
+
+  /**
+   * Get the maxium value of a key in an array containg objects with that key.
+   * @param {Array} array A an array containing objects.
+   * @param {String} key A key which exists in the objects in the array, with associated numerical values.
+   * @returns {Number} The maxium value of all the keys in the object array.
+   */
+  static max(array, key) {
+    return array.reduce(
+      (max, p) => (+p[key] > max ? +p[key] : max),
+      +array[0][key]
+    );
+  }
+
+  /**
+   * Normalize the values in an object array associated with a specific key between 0 and 1 based on the
+   * minimums and maxiums contained in the object array by that key.
+   * @param {Array} array A an array containing objects.
+   * @param {String} key A key which exists in the objects in the array, with associated numerical values.
+   * @returns {Array} The modified object array.
+   */
+  static normalizeByKey(array, key) {
+    const max = this.max(array, key);
+    const min = this.min(array, key);
+
+    array.map(obj => {
+      obj[key] = Numbers.normalize(+obj[key], min, max);
+    });
+    return array;
+  }
+
+  /**
+   * Normalize the values in an object array associated with specific keys between 0 and 1 based on the
+   * minimums and maxiums contained in the object array by those keys.
+   * @param {Array} array A an array containing objects.
+   * @param {String[]} keys An array of keys which exists in the objects in the array, with associated numerical values.
+   * @returns {Array} The modified object array.
+   */
+  static normalizeByKeys(array, keys) {
+    keys.map(key => {
+      const max = this.max(array, key);
+      const min = this.min(array, key);
+
+      array.map(obj => {
+        obj[key] = Numbers.normalize(+obj[key], min, max);
+      });
+    });
+
+    return array;
   }
 
   /**

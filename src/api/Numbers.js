@@ -20,4 +20,15 @@ export class Numbers {
   static randomFloat(min, max) {
     return +(Math.random() * (max - min) + min);
   }
+
+  /**
+   * Normalize a number between 0 and 1 based on a known minimum and maximum value.
+   * @param {Number} val The value to normalize.
+   * @param {Number} min Minimum extent.
+   * @param {Number} max Maximum extent.
+   * @returns {Number} The random float between the min and max input.
+   */
+  static normalize(val, min, max) {
+    return (val - min) / (max - min);
+  }
 }
