@@ -38,8 +38,8 @@ import * as Algos from from "@mitevpi/algos"; // from npm
 
 ```js
 // from source
-const Arrays = require("./Color");
-const Numbers = require("./Place");
+const Arrays = require("./Arrays");
+const Numbers = require("./Numbers");
 
 // from npm
 const { Arrays } = require("@mitevpi/algos");
