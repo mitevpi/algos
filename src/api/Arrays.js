@@ -15,6 +15,24 @@ export class Arrays {
   }
 
   /**
+   * Chunk one flat array into a series of arrays of a certain size.
+   * @param {Array} array A an array of values (string, number, etc.).
+   * @param {Number} size The size of chunks to split the array into.
+   * @returns {Array[]} An array containing arrays of the specified size, containing
+   * the original data from the flat array.
+   */
+  static chunk(array, size) {
+    if (!array) return [];
+    const firstChunk = array.slice(0, size); // create the first chunk of the given array
+    if (!firstChunk.length) {
+      return array; // this is the base case to terminal the recursive
+    }
+    return [firstChunk].concat(
+      this.chunk(array.slice(size, array.length), size)
+    );
+  }
+
+  /**
    * Flattens n-nested arrays into one array of values.
    * @param {Array} array A an array containing arrays nested to any amount (n).
    * @returns {Array} A flat array of values/objects extracted from the nested arrays.

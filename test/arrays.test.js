@@ -17,7 +17,10 @@ test("Arrays.flatten", () => {
   const resultArray = [1, 2, 3, 4, 5, 7];
   const resultArray02 = [1, 0, 1, 2, 3, 0, 4, 5, 7];
 
-  const array01 = [[1, 2, 3], [4, 5, 7]];
+  const array01 = [
+    [1, 2, 3],
+    [4, 5, 7]
+  ];
   const array02 = [[[1, 2, 3]], [4, 5, 7]];
   const array03 = [[[1, 2, 3]], [[4, 5, 7]]];
   const array04 = [1, [0, [[1, [2, 3], 0]]], [[4, 5, 7]]];
@@ -31,4 +34,10 @@ test("Arrays.flatten", () => {
   expect(JSON.stringify(flat02)).toBe(JSON.stringify(resultArray));
   expect(JSON.stringify(flat03)).toBe(JSON.stringify(resultArray));
   expect(JSON.stringify(flat04)).toBe(JSON.stringify(resultArray02));
+});
+
+test("Arrays.chunk", () => {
+  const array2 = ["tom", "peter", "mary", "tom", "mary", "mary", "jeremy"];
+  const res = Arrays.chunk(array2, 2);
+  expect(res.length).toBe(4);
 });

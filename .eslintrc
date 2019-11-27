@@ -13,6 +13,7 @@
     "jest/globals": true
   },
   "rules": {
+    "jest/expect-expect": "warn",
     "no-plusplus": "off",
     "array-callback-return": "off",
     "no-unused-expressions": "off",
