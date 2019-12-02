@@ -2,12 +2,11 @@
   "parser": "babel-eslint",
   "extends": [
     "airbnb-base",
-    "plugin:flowtype/recommended",
     "plugin:prettier/recommended",
-    "prettier/flowtype",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "eslint:recommended"
   ],
-  "plugins": ["flowtype", "flowtype-errors", "jest"],
+  "plugins": ["jest", "prettier"],
   "env": {
     "jest": true,
     "jest/globals": true
@@ -19,7 +18,6 @@
     "no-unused-expressions": "off",
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
-    "flowtype-errors/show-errors": "error",
     "no-console": "off",
     "semi": ["error", "always"],
     "linebreak-style": "off"
