@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@mitevpi/algos 0.0.8 | Documentation</title>
+  <title>@mitevpi/algos 0.0.9 | Documentation</title>
   <meta name='description' content='Low-level algorithms for data processing and manipulation.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@mitevpi/algos</h3>
-          <div class='mb1'><code>0.0.8</code></div>
+          <div class='mb1'><code>0.0.9</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -464,7 +464,7 @@ the original data from the flat array.
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>flatten(arr, result, array)</span>
+            <span class='code strong strong truncate'>flatten(array, result)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -474,7 +474,7 @@ the original data from the flat array.
 
   <p>Flattens n-nested arrays into one array of values.</p>
 
-    <div class='pre p1 fill-light mt0'>flatten(arr: any, result: any, array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+    <div class='pre p1 fill-light mt0'>flatten(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, result: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -491,8 +491,9 @@ the original data from the flat array.
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>arr</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    A an array containing arrays nested to any amount (n).
+
           </div>
           
         </div>
@@ -502,15 +503,6 @@ the original data from the flat array.
             <span class='code bold'>result</span> <code class='quiet'>(any
             = <code>[]</code>)</code>
 	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    A an array containing arrays nested to any amount (n).
-
           </div>
           
         </div>
@@ -1006,7 +998,7 @@ data points corresponding to the property key used for grouping.
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></code>:
-        Array of objects sorted by the key's value across occurances.
+        Array of objects sorted by the key's value across occurrences.
 
       
     
@@ -1040,7 +1032,7 @@ data points corresponding to the property key used for grouping.
 
   
 
-  <p>Get the mininum value of a key in an array containg objects with that key.</p>
+  <p>Get the minimum value of a key in an array containing objects with that key.</p>
 
     <div class='pre p1 fill-light mt0'>min(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
   
@@ -1084,7 +1076,7 @@ data points corresponding to the property key used for grouping.
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
-        The minium value of all the keys in the object array.
+        The minimum value of all the keys in the object array.
 
       
     
@@ -1118,7 +1110,7 @@ data points corresponding to the property key used for grouping.
 
   
 
-  <p>Get the maxium value of a key in an array containg objects with that key.</p>
+  <p>Get the maximum value of a key in an array containing objects with that key.</p>
 
     <div class='pre p1 fill-light mt0'>max(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
   
@@ -1162,7 +1154,7 @@ data points corresponding to the property key used for grouping.
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
-        The maxium value of all the keys in the object array.
+        The maximum value of all the keys in the object array.
 
       
     
@@ -1197,7 +1189,7 @@ data points corresponding to the property key used for grouping.
   
 
   <p>Normalize the values in an object array associated with a specific key between 0 and 1 based on the
-minimums and maxiums contained in the object array by that key.</p>
+minimums and maximums contained in the object array by that key.</p>
 
     <div class='pre p1 fill-light mt0'>normalizeByKey(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
@@ -1276,7 +1268,7 @@ minimums and maxiums contained in the object array by that key.</p>
   
 
   <p>Normalize the values in an object array associated with specific keys between 0 and 1 based on the
-minimums and maxiums contained in the object array by those keys.</p>
+minimums and maximums contained in the object array by those keys.</p>
 
     <div class='pre p1 fill-light mt0'>normalizeByKeys(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, keys: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
@@ -1355,7 +1347,7 @@ minimums and maxiums contained in the object array by those keys.</p>
   
 
   <p>Normalize all the values in an object array associated with keys which have numerical value pairs
-between 0 and 1 based on the minimums and maxiums contained in the object array by those keys.</p>
+between 0 and 1 based on the minimums and maximums contained in the object array by those keys.</p>
 
     <div class='pre p1 fill-light mt0'>normalizeAuto(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   

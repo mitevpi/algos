@@ -21,24 +21,22 @@ export class ArraysObjective extends Arrays {
    * @param {Object[]} array An array of objects with similar properties.
    * @param {String} key The unique key to sort by.
    * @param {Boolean} descending Whether to sort descending (default), or ascending.
-   * @returns {Object[]} Array of objects sorted by the key's value across occurances.
+   * @returns {Object[]} Array of objects sorted by the key's value across occurrences.
    */
   static sortBy(array, key, descending = true) {
     return array.sort((a, b) => {
-      switch (descending) {
-        case false:
-          return a[key] - b[key];
-        default:
-          return b[key] - a[key];
+      if (descending === false) {
+        return a[key] - b[key];
       }
+      return b[key] - a[key];
     });
   }
 
   /**
-   * Get the mininum value of a key in an array containg objects with that key.
+   * Get the minimum value of a key in an array containing objects with that key.
    * @param {Array} array A an array containing objects.
    * @param {String} key A key which exists in the objects in the array, with associated numerical values.
-   * @returns {Number} The minium value of all the keys in the object array.
+   * @returns {Number} The minimum value of all the keys in the object array.
    */
   static min(array, key) {
     return array.reduce(
@@ -48,10 +46,10 @@ export class ArraysObjective extends Arrays {
   }
 
   /**
-   * Get the maxium value of a key in an array containg objects with that key.
+   * Get the maximum value of a key in an array containing objects with that key.
    * @param {Array} array A an array containing objects.
    * @param {String} key A key which exists in the objects in the array, with associated numerical values.
-   * @returns {Number} The maxium value of all the keys in the object array.
+   * @returns {Number} The maximum value of all the keys in the object array.
    */
   static max(array, key) {
     return array.reduce(
@@ -62,7 +60,7 @@ export class ArraysObjective extends Arrays {
 
   /**
    * Normalize the values in an object array associated with a specific key between 0 and 1 based on the
-   * minimums and maxiums contained in the object array by that key.
+   * minimums and maximums contained in the object array by that key.
    * @param {Array} array A an array containing objects.
    * @param {String} key A key which exists in the objects in the array, with associated numerical values.
    * @returns {Array} The modified object array.
@@ -79,7 +77,7 @@ export class ArraysObjective extends Arrays {
 
   /**
    * Normalize the values in an object array associated with specific keys between 0 and 1 based on the
-   * minimums and maxiums contained in the object array by those keys.
+   * minimums and maximums contained in the object array by those keys.
    * @param {Array} array A an array containing objects.
    * @param {String[]} keys An array of keys which exists in the objects in the array, with associated numerical values.
    * @returns {Array} The modified object array.
@@ -99,7 +97,7 @@ export class ArraysObjective extends Arrays {
 
   /**
    * Normalize all the values in an object array associated with keys which have numerical value pairs
-   * between 0 and 1 based on the minimums and maxiums contained in the object array by those keys.
+   * between 0 and 1 based on the minimums and maximums contained in the object array by those keys.
    * @param {Array} array A an array containing objects.
    * @returns {Array} The modified object array.
    */

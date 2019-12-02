@@ -122,9 +122,8 @@ Flattens n-nested arrays into one array of values.
 
 #### Parameters
 
--   `arr`  
--   `result`   (optional, default `[]`)
 -   `array` **[Array][49]** A an array containing arrays nested to any amount (n).
+-   `result`   (optional, default `[]`)
 
 Returns **[Array][49]** A flat array of values/objects extracted from the nested arrays.
 
@@ -154,34 +153,34 @@ Sort an array of objects with similar properties by a shared key's value.
 -   `key` **[String][51]** The unique key to sort by.
 -   `descending` **[Boolean][52]** Whether to sort descending (default), or ascending. (optional, default `true`)
 
-Returns **[Array][49]&lt;[Object][50]>** Array of objects sorted by the key's value across occurances.
+Returns **[Array][49]&lt;[Object][50]>** Array of objects sorted by the key's value across occurrences.
 
 ### min
 
-Get the mininum value of a key in an array containg objects with that key.
+Get the minimum value of a key in an array containing objects with that key.
 
 #### Parameters
 
 -   `array` **[Array][49]** A an array containing objects.
 -   `key` **[String][51]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][48]** The minium value of all the keys in the object array.
+Returns **[Number][48]** The minimum value of all the keys in the object array.
 
 ### max
 
-Get the maxium value of a key in an array containg objects with that key.
+Get the maximum value of a key in an array containing objects with that key.
 
 #### Parameters
 
 -   `array` **[Array][49]** A an array containing objects.
 -   `key` **[String][51]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][48]** The maxium value of all the keys in the object array.
+Returns **[Number][48]** The maximum value of all the keys in the object array.
 
 ### normalizeByKey
 
 Normalize the values in an object array associated with a specific key between 0 and 1 based on the
-minimums and maxiums contained in the object array by that key.
+minimums and maximums contained in the object array by that key.
 
 #### Parameters
 
@@ -193,7 +192,7 @@ Returns **[Array][49]** The modified object array.
 ### normalizeByKeys
 
 Normalize the values in an object array associated with specific keys between 0 and 1 based on the
-minimums and maxiums contained in the object array by those keys.
+minimums and maximums contained in the object array by those keys.
 
 #### Parameters
 
@@ -205,7 +204,7 @@ Returns **[Array][49]** The modified object array.
 ### normalizeAuto
 
 Normalize all the values in an object array associated with keys which have numerical value pairs
-between 0 and 1 based on the minimums and maxiums contained in the object array by those keys.
+between 0 and 1 based on the minimums and maximums contained in the object array by those keys.
 
 #### Parameters
 

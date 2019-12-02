@@ -37,9 +37,9 @@ export class Arrays {
    * @param {Array} array A an array containing arrays nested to any amount (n).
    * @returns {Array} A flat array of values/objects extracted from the nested arrays.
    */
-  static flatten(arr, result = []) {
-    for (let i = 0, { length } = arr; i < length; i++) {
-      const value = arr[i];
+  static flatten(array, result = []) {
+    for (let i = 0, { length } = array; i < length; i++) {
+      const value = array[i];
       if (Array.isArray(value)) {
         this.flatten(value, result);
       } else {
