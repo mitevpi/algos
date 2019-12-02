@@ -34,7 +34,7 @@ export class Strings {
    * @param {String} str The string to clean of non-alpha-numeric characters.
    * @returns {String} String without characters that aren't letters or numbers.
    */
-  static removeNonAlphaNumberic(str) {
+  static removeNonAlphaNumeric(str) {
     return this.checkNull(str).replace(/\W/g, "");
   }
 }

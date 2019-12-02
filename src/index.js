@@ -1,4 +1,3 @@
-// @flow
 /**
  * Class for working with numbers and numerical data.
  * @property {Numbers}

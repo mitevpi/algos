@@ -47,7 +47,7 @@
         -   [Parameters][43]
     -   [removeNonPathable][44]
         -   [Parameters][45]
-    -   [removeNonAlphaNumberic][46]
+    -   [removeNonAlphaNumeric][46]
         -   [Parameters][47]
 
 ## Numbers
@@ -294,7 +294,7 @@ Remove non-pathable characters from a string.
 
 Returns **[String][51]** String without the path-breaking characters.
 
-### removeNonAlphaNumberic
+### removeNonAlphaNumeric
 
 Remove non-alpha-numeric characters from a string.
 
@@ -394,7 +394,7 @@ Returns **[String][51]** String without characters that aren't letters or number
 
 [45]: #parameters-19
 
-[46]: #removenonalphanumberic
+[46]: #removenonalphanumeric
 
 [47]: #parameters-20
 

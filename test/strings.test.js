@@ -15,6 +15,6 @@ test("Strings.removeNonPathable", () => {
 });
 
 test("Strings.removeNonAlphaNumeric", () => {
-  const res = Strings.removeNonAlphaNumberic("<3a'{} th;i1ng(> /|~`|p:ath2");
+  const res = Strings.removeNonAlphaNumeric("<3a'{} th;i1ng(> /|~`|p:ath2");
   expect(res).toBe("3athi1ngpath2");
 });
