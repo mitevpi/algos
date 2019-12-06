@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos) [![npm bundle size](https://img.shields.io/bundlephobia/min/@mitevpi/algos.svg)](https://bundlephobia.com/result?p=@mitevpi/algos) [![npm](https://img.shields.io/npm/dw/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos) [![npm2](https://img.shields.io/npm/dt/@mitevpi/algos.svg)](https://www.npmjs.com/package/@mitevpi/algos)
 
-[![GitHub issues](https://img.shields.io/github/issues/mitevpi/algos.svg)](https://github.com/mitevpi/algos/issues) ![David](https://img.shields.io/david/dev/mitevpi/algos.svg) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/algos.svg)](https://github.com/mitevpi/algos/commits/master)
+![Azure DevOps builds](https://img.shields.io/azure-devops/build/pmitevpi/pmitevpi/2) ![Azure DevOps Tests](https://img.shields.io/azure-devops/tests/pmitevpi/pmitevpi/2) [![GitHub issues](https://img.shields.io/github/issues/mitevpi/algos.svg)](https://github.com/mitevpi/algos/issues) ![David](https://img.shields.io/david/dev/mitevpi/algos.svg) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/algos.svg)](https://github.com/mitevpi/algos/commits/master)
 
 Low-level JavaScript algorithms as shorthand for everyday use in frontend & backend code.
 
@@ -84,7 +84,10 @@ import { Arrays } from "@mitevpi/algos";
 
 ```js
 // any level of nesting as an input
-const array01 = [[1, 2, 3], [4, 5, 7]];
+const array01 = [
+  [1, 2, 3],
+  [4, 5, 7]
+];
 const array02 = [[[1, 2, 3]], [4, 5, 7]];
 const array03 = [[[1, 2, 3]], [[4, 5, 7]]];
 const array04 = [1, [0, [[1, [2, 3], 0]]], [[4, 5, 7]]];
@@ -116,7 +119,7 @@ const states = [
   { population: 10, size: 13, state: "OH", near: "KY" },
   { population: 20, size: 20, state: "KY", near: "TN" },
   { population: 60, size: 20, state: "IN", near: "PA" },
-  { population: 40, size: 13, state: "PA", near: "NY" },
+  { population: 40, size: 13, state: "PA", near: "NY" }
 ];
 ```
 
