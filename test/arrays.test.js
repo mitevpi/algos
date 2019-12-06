@@ -1,5 +1,8 @@
 import { Arrays } from "../src";
 
+const nullArray = null;
+const emptyArray = [];
+
 test("import Arrays", () => {
   expect.anything(Arrays);
 });
@@ -39,5 +42,10 @@ test("Arrays.flatten", () => {
 test("Arrays.chunk", () => {
   const array2 = ["tom", "peter", "mary", "tom", "mary", "mary", "jeremy"];
   const res = Arrays.chunk(array2, 2);
+  const res2 = Arrays.chunk(nullArray, 2);
+  const res3 = Arrays.chunk(emptyArray, 2);
+
   expect(res.length).toBe(4);
+  expect(res2.length).toBe(0);
+  expect(res3.length).toBe(0);
 });

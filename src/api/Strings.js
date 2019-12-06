@@ -37,4 +37,23 @@ export class Strings {
   static removeNonAlphaNumeric(str) {
     return this.checkNull(str).replace(/\W/g, "");
   }
+
+  /**
+   * Remove non-alphabetic characters from a string.
+   * @param {String} str The string to clean of non-alphabetic characters.
+   * @returns {String} String with characters which are only EN letters.
+   */
+  static removeNonAlpha(str) {
+    return this.checkNull(str).replace(/([^a-zA-Z])+/g, "");
+  }
+
+  /**
+   * Create a random, unique identifier string.
+   * @returns {String} A random string with alpha-numeric characters.
+   */
+  static createUniqueID() {
+    return Math.random()
+      .toString(36)
+      .slice(2);
+  }
 }
