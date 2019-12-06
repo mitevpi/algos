@@ -1,6 +1,6 @@
 {
   "name": "@mitevpi/algos",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Low-level algorithms for data processing and manipulation.",
   "license": "MIT",
   "repository": "mitevpi/algos",
@@ -59,10 +59,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "7.7.4",
-    "@babel/core": "7.7.4",
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.7.5",
     "@babel/plugin-proposal-class-properties": "7.7.4",
-    "@babel/preset-env": "7.7.4",
+    "@babel/preset-env": "7.7.5",
     "babel-eslint": "10.0.3",
     "babel-jest": "24.9.0",
     "documentation": "12.1.4",
