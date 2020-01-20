@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@mitevpi/algos 0.0.9 | Documentation</title>
+  <title>@mitevpi/algos 0.0.10 | Documentation</title>
   <meta name='description' content='Low-level algorithms for data processing and manipulation.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@mitevpi/algos</h3>
-          <div class='mb1'><code>0.0.9</code></div>
+          <div class='mb1'><code>0.0.10</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -246,21 +246,77 @@
                       </a></li>
                     
                       <li><a
-                        href='#stringsremovenonalphanumeric'
+                        href='#stringscreateuniqueid'
+                        class='regular pre-open'>
+                        .createUniqueID
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stringscyrillic'
+                  class=" toggle-sibling">
+                  StringsCyrillic
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#stringscyrillicallwords'
+                        class='regular pre-open'>
+                        .allWords
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stringslatin'
+                  class=" toggle-sibling">
+                  StringsLatin
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#stringslatinallwords'
+                        class='regular pre-open'>
+                        .allWords
+                      </a></li>
+                    
+                      <li><a
+                        href='#stringslatinremovenonalphanumeric'
                         class='regular pre-open'>
                         .removeNonAlphaNumeric
                       </a></li>
                     
                       <li><a
-                        href='#stringsremovenonalpha'
+                        href='#stringslatinremovenonalpha'
                         class='regular pre-open'>
                         .removeNonAlpha
-                      </a></li>
-                    
-                      <li><a
-                        href='#stringscreateuniqueid'
-                        class='regular pre-open'>
-                        .createUniqueID
                       </a></li>
                     
                     </ul>
@@ -2063,7 +2119,308 @@ parent -> child hierarchy established.
       </div>
     </div>
   
-    <div class='border-bottom' id='stringsremovenonalphanumeric'>
+    <div class='border-bottom' id='stringscreateuniqueid'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createUniqueID()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Create a random, unique identifier string.</p>
+
+    <div class='pre p1 fill-light mt0'>createUniqueID(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        A random string with alpha-numeric characters.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stringscyrillic'>
+      StringsCyrillic
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Class for working with Cyrillic string data.</p>
+
+    <div class='pre p1 fill-light mt0'>StringsCyrillic</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='stringscyrillicallwords'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>allWords(str)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get an array of all the Cyrillic words from a monolithic string.</p>
+
+    <div class='pre p1 fill-light mt0'>allWords(str: any): RegExpMatchArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(any)</code>
+	    The string to break up into individual words.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>RegExpMatchArray</code>:
+        An array of individual Cyrillic words.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stringslatin'>
+      StringsLatin
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Class for working with Latin string data.</p>
+
+    <div class='pre p1 fill-light mt0'>StringsLatin</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='stringslatinallwords'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>allWords(str)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get an array of all the words from a monolithic string.</p>
+
+    <div class='pre p1 fill-light mt0'>allWords(str: any): RegExpMatchArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(any)</code>
+	    The string to break up into individual words.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>RegExpMatchArray</code>:
+        An array of individual words.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stringslatinremovenonalphanumeric'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -2132,7 +2489,7 @@ parent -> child hierarchy established.
       </div>
     </div>
   
-    <div class='border-bottom' id='stringsremovenonalpha'>
+    <div class='border-bottom' id='stringslatinremovenonalpha'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -2180,61 +2537,6 @@ parent -> child hierarchy established.
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
         String with characters which are only EN letters.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='stringscreateuniqueid'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>createUniqueID()</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Create a random, unique identifier string.</p>
-
-    <div class='pre p1 fill-light mt0'>createUniqueID(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
-        A random string with alpha-numeric characters.
 
       
     

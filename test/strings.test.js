@@ -24,16 +24,6 @@ test("Strings.removeNonPathable", () => {
   expect(res).toBe("a thing ~`path");
 });
 
-test("Strings.removeNonAlphaNumeric", () => {
-  const res = Strings.removeNonAlphaNumeric("<3a'{} th;i1ng(> /|~`|p:ath2");
-  expect(res).toBe("3athi1ngpath2");
-});
-
-test("Strings.removeNonAlpha", () => {
-  const res = Strings.removeNonAlpha("<3a'{} th;i1ng(> /|~`|p:ath2");
-  expect(res).toBe("athingpath");
-});
-
 test("Strings.createUniqueID", () => {
   const res = Strings.createUniqueID();
   expect(res.length).toBeGreaterThanOrEqual(1);
