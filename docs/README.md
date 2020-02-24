@@ -58,6 +58,13 @@
         -   [Parameters][54]
     -   [removeNonAlpha][55]
         -   [Parameters][56]
+-   [MockData][57]
+    -   [range][58]
+        -   [Parameters][59]
+    -   [packData][60]
+        -   [Parameters][61]
+    -   [networkData][62]
+        -   [Parameters][63]
 
 ## Numbers
 
@@ -69,10 +76,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][57]** Minimum extent.
--   `max` **[Number][57]** Maximum extent.
+-   `min` **[Number][64]** Minimum extent.
+-   `max` **[Number][64]** Maximum extent.
 
-Returns **[Number][57]** The random integer between the min and max input.
+Returns **[Number][64]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -80,10 +87,10 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][57]** Minimum extent.
--   `max` **[Number][57]** Maximum extent.
+-   `min` **[Number][64]** Minimum extent.
+-   `max` **[Number][64]** Maximum extent.
 
-Returns **[Number][57]** The random float between the min and max input.
+Returns **[Number][64]** The random float between the min and max input.
 
 ### normalize
 
@@ -91,11 +98,11 @@ Normalize a number between 0 and 1 based on a known minimum and maximum value.
 
 #### Parameters
 
--   `val` **[Number][57]** The value to normalize.
--   `min` **[Number][57]** Minimum extent.
--   `max` **[Number][57]** Maximum extent.
+-   `val` **[Number][64]** The value to normalize.
+-   `min` **[Number][64]** Minimum extent.
+-   `max` **[Number][64]** Maximum extent.
 
-Returns **[Number][57]** The random float between the min and max input.
+Returns **[Number][64]** The random float between the min and max input.
 
 ## Arrays
 
@@ -108,9 +115,9 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array of values (string, number).
+-   `array` **[Array][65]** A an array of values (string, number).
 
-Returns **[Object][59]** Object containing the unique keys of the array, and
+Returns **[Object][66]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
 
 ### chunk
@@ -119,10 +126,10 @@ Chunk one flat array into a series of arrays of a certain size.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array of values (string, number, etc.).
--   `size` **[Number][57]** The size of chunks to split the array into.
+-   `array` **[Array][65]** A an array of values (string, number, etc.).
+-   `size` **[Number][64]** The size of chunks to split the array into.
 
-Returns **[Array][58]&lt;[Array][58]>** An array containing arrays of the specified size, containing
+Returns **[Array][65]&lt;[Array][65]>** An array containing arrays of the specified size, containing
 the original data from the flat array.
 
 ### flatten
@@ -131,10 +138,10 @@ Flattens n-nested arrays into one array of values.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing arrays nested to any amount (n).
+-   `array` **[Array][65]** A an array containing arrays nested to any amount (n).
 -   `result`   (optional, default `[]`)
 
-Returns **[Array][58]** A flat array of values/objects extracted from the nested arrays.
+Returns **[Array][65]** A flat array of values/objects extracted from the nested arrays.
 
 ## ArraysObjective
 
@@ -146,10 +153,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Object][59]>** An array of objects with similar properties.
--   `key` **[String][60]** The unique key to group by.
+-   `array` **[Array][65]&lt;[Object][66]>** An array of objects with similar properties.
+-   `key` **[String][67]** The unique key to group by.
 
-Returns **[Object][59]** Object containing child objects which contain the individual
+Returns **[Object][66]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### sortBy
@@ -158,11 +165,11 @@ Sort an array of objects with similar properties by a shared key's value.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Object][59]>** An array of objects with similar properties.
--   `key` **[String][60]** The unique key to sort by.
--   `descending` **[Boolean][61]** Whether to sort descending (default), or ascending. (optional, default `true`)
+-   `array` **[Array][65]&lt;[Object][66]>** An array of objects with similar properties.
+-   `key` **[String][67]** The unique key to sort by.
+-   `descending` **[Boolean][68]** Whether to sort descending (default), or ascending. (optional, default `true`)
 
-Returns **[Array][58]&lt;[Object][59]>** Array of objects sorted by the key's value across occurrences.
+Returns **[Array][65]&lt;[Object][66]>** Array of objects sorted by the key's value across occurrences.
 
 ### min
 
@@ -170,10 +177,10 @@ Get the minimum value of a key in an array containing objects with that key.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing objects.
--   `key` **[String][60]** A key which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][65]** A an array containing objects.
+-   `key` **[String][67]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][57]** The minimum value of all the keys in the object array.
+Returns **[Number][64]** The minimum value of all the keys in the object array.
 
 ### max
 
@@ -181,10 +188,10 @@ Get the maximum value of a key in an array containing objects with that key.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing objects.
--   `key` **[String][60]** A key which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][65]** A an array containing objects.
+-   `key` **[String][67]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][57]** The maximum value of all the keys in the object array.
+Returns **[Number][64]** The maximum value of all the keys in the object array.
 
 ### normalizeByKey
 
@@ -193,10 +200,10 @@ minimums and maximums contained in the object array by that key.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing objects.
--   `key` **[String][60]** A key which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][65]** A an array containing objects.
+-   `key` **[String][67]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Array][58]** The modified object array.
+Returns **[Array][65]** The modified object array.
 
 ### normalizeByKeys
 
@@ -205,10 +212,10 @@ minimums and maximums contained in the object array by those keys.
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing objects.
--   `keys` **[Array][58]&lt;[String][60]>** An array of keys which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][65]** A an array containing objects.
+-   `keys` **[Array][65]&lt;[String][67]>** An array of keys which exists in the objects in the array, with associated numerical values.
 
-Returns **[Array][58]** The modified object array.
+Returns **[Array][65]** The modified object array.
 
 ### normalizeAuto
 
@@ -217,9 +224,9 @@ between 0 and 1 based on the minimums and maximums contained in the object array
 
 #### Parameters
 
--   `array` **[Array][58]** A an array containing objects.
+-   `array` **[Array][65]** A an array containing objects.
 
-Returns **[Array][58]** The modified object array.
+Returns **[Array][65]** The modified object array.
 
 ### hierarchyFromFlat
 
@@ -228,11 +235,11 @@ hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Object][59]>** A an array of objects.
--   `parentKey` **[String][60]** The common property of the objects to establish primary identity.
--   `childKey` **[String][60]** The common property of the objects to establish parent -> child relationships.
+-   `array` **[Array][65]&lt;[Object][66]>** A an array of objects.
+-   `parentKey` **[String][67]** The common property of the objects to establish primary identity.
+-   `childKey` **[String][67]** The common property of the objects to establish parent -> child relationships.
 
-Returns **[Array][58]&lt;[Object][59]>** An array of objects, nested using the .children accessor based on the
+Returns **[Array][65]&lt;[Object][66]>** An array of objects, nested using the .children accessor based on the
 parent -> child hierarchy established.
 
 ## ArraysNumerical
@@ -245,9 +252,9 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Number][57]>** A an array of values to sum.
+-   `array` **[Array][65]&lt;[Number][64]>** A an array of values to sum.
 
-Returns **[Number][57]** The sum of values in the array.
+Returns **[Number][64]** The sum of values in the array.
 
 ### max
 
@@ -255,9 +262,9 @@ Get the maximum value in the array.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Number][57]>** A an array of numerical values.
+-   `array` **[Array][65]&lt;[Number][64]>** A an array of numerical values.
 
-Returns **[Number][57]** The maximum of the values in the array.
+Returns **[Number][64]** The maximum of the values in the array.
 
 ### min
 
@@ -265,9 +272,9 @@ Get the minimum value in the array.
 
 #### Parameters
 
--   `array` **[Array][58]&lt;[Number][57]>** A an array of numerical values.
+-   `array` **[Array][65]&lt;[Number][64]>** A an array of numerical values.
 
-Returns **[Number][57]** The minimum of the values in the array.
+Returns **[Number][64]** The minimum of the values in the array.
 
 ## Strings
 
@@ -279,9 +286,9 @@ Check whether a string is null/empty and return a workable string.
 
 #### Parameters
 
--   `str` **[String][60]** The string to check for null/empty.
+-   `str` **[String][67]** The string to check for null/empty.
 
-Returns **[String][60]** A full or empty string.
+Returns **[String][67]** A full or empty string.
 
 ### removeNonPrintable
 
@@ -289,9 +296,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][60]** The string to clean of non-printable characters.
+-   `str` **[String][67]** The string to clean of non-printable characters.
 
-Returns **[String][60]** String without the non-ASCII characters.
+Returns **[String][67]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -299,15 +306,15 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][60]** The string to clean of non-pathable characters.
+-   `str` **[String][67]** The string to clean of non-pathable characters.
 
-Returns **[String][60]** String without the path-breaking characters.
+Returns **[String][67]** String without the path-breaking characters.
 
 ### createUniqueID
 
 Create a random, unique identifier string.
 
-Returns **[String][60]** A random string with alpha-numeric characters.
+Returns **[String][67]** A random string with alpha-numeric characters.
 
 ## StringsCyrillic
 
@@ -343,9 +350,9 @@ Remove non-alpha-numeric characters from a string.
 
 #### Parameters
 
--   `str` **[String][60]** The string to clean of non-alpha-numeric characters.
+-   `str` **[String][67]** The string to clean of non-alpha-numeric characters.
 
-Returns **[String][60]** String without characters that aren't letters or numbers.
+Returns **[String][67]** String without characters that aren't letters or numbers.
 
 ### removeNonAlpha
 
@@ -353,9 +360,45 @@ Remove non-alphabetic characters from a string.
 
 #### Parameters
 
--   `str` **[String][60]** The string to clean of non-alphabetic characters.
+-   `str` **[String][67]** The string to clean of non-alphabetic characters.
 
-Returns **[String][60]** String with characters which are only EN letters.
+Returns **[String][67]** String with characters which are only EN letters.
+
+## MockData
+
+Class for creating mock data for algorithm/visualization testing.
+
+### range
+
+Get a filled array of the corresponding size.
+
+#### Parameters
+
+-   `size` **[Number][64]** The amount of numbers in the array.
+
+Returns **[Array][65]&lt;[Number][64]>** A filled array the length of the specified size.
+
+### packData
+
+Create mock data for a circle-packing algorithm.
+
+#### Parameters
+
+-   `size`  The amount of data points to create
+
+Returns **[Array][65]&lt;{r: [number][64], spaceType: ([string][67]), id: [Number][64]}>** An array of objects which
+can be used as circles in circle-packing algorithm testing.
+
+### networkData
+
+Create mock data for a network/graph algorithm.
+
+#### Parameters
+
+-   `size`  The amount of data points to create
+
+Returns **{nodes: [Array][65]&lt;{size: [Number][64], x: null, y: null}>, links: [Array][65]&lt;{source: [number][64], target: [number][64]}>}** An array
+of objects which can be used as nodes and connections in network/graph algorithm testing scenarios.
 
 [1]: #numbers
 
@@ -469,12 +512,26 @@ Returns **[String][60]** String with characters which are only EN letters.
 
 [56]: #parameters-23
 
-[57]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[57]: #mockdata
 
-[58]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[58]: #range
 
-[59]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[59]: #parameters-24
 
-[60]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[60]: #packdata
 
-[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[61]: #parameters-25
+
+[62]: #networkdata
+
+[63]: #parameters-26
+
+[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[66]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[67]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[68]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean

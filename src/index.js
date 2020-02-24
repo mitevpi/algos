@@ -33,3 +33,8 @@ export { StringsCyrillic } from "./api/StringsCyrillic";
  * @property {StringsLatin}
  */
 export { StringsLatin } from "./api/StringsLatin";
+/**
+ * Class for creating mock data for algorithm/visualization testing.
+ * @property {MockData}
+ */
+export { MockData } from "./api/MockData";
