@@ -22,3 +22,10 @@ test("Numbers.normalize", () => {
   expect(res).toBe(0);
   expect(res1).toBe(0.4);
 });
+
+test("Numbers.normalizeToRange", () => {
+  const res = Numbers.normalizeToRange(300, -100, 600, -1, 10);
+  const res1 = Numbers.normalizeToRange(300, -100, 600, 10, 60);
+  expect(res).toBe(5.285714285714286);
+  expect(res1).toBe(38.57142857142857);
+});
