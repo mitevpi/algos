@@ -1,6 +1,6 @@
 {
   "name": "@mitevpi/algos",
-  "version": "0.0.12",
+  "version": "0.2.0",
   "description": "Low-level algorithms for data processing and manipulation.",
   "license": "MIT",
   "repository": "mitevpi/algos",
