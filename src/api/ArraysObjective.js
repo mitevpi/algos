@@ -59,36 +59,46 @@ export class ArraysObjective extends Arrays {
   }
 
   /**
-   * Normalize the values in an object array associated with a specific key between 0 and 1 based on the
-   * minimums and maximums contained in the object array by that key.
+   * Normalize the values in an object array associated with a specific key between 0 and 1 or a custom range
+   * based on the minimums and maximums contained in the object array by that key.
    * @param {Array} array A an array containing objects.
    * @param {String} key A key which exists in the objects in the array, with associated numerical values.
+   * @param {Number} newMin (Optional) A custom minimum value to normalize to.
+   * @param {Number} newMax (Optional) A custom maximum value to normalize to.
    * @returns {Array} The modified object array.
    */
-  static normalizeByKey(array, key) {
+  static normalizeByKey(array, key, newMin = 0, newMax = 1) {
     const max = this.max(array, key);
     const min = this.min(array, key);
 
-    array.map(obj => {
-      obj[key] = Numbers.normalize(+obj[key], min, max);
+    array.map((obj) => {
+      obj[key] = Numbers.normalizeToRange(+obj[key], min, max, newMin, newMax);
     });
     return array;
   }
 
   /**
-   * Normalize the values in an object array associated with specific keys between 0 and 1 based on the
-   * minimums and maximums contained in the object array by those keys.
+   * Normalize the values in an object array associated with specific keys between 0 and 1 or a custom range
+   * based on the minimums and maximums contained in the object array by those keys.
    * @param {Array} array A an array containing objects.
    * @param {String[]} keys An array of keys which exists in the objects in the array, with associated numerical values.
+   * @param {Number} newMin (Optional) A custom minimum value to normalize to.
+   * @param {Number} newMax (Optional) A custom maximum value to normalize to.
    * @returns {Array} The modified object array.
    */
-  static normalizeByKeys(array, keys) {
-    keys.map(key => {
+  static normalizeByKeys(array, keys, newMin = 0, newMax = 1) {
+    keys.map((key) => {
       const max = this.max(array, key);
       const min = this.min(array, key);
 
-      array.map(obj => {
-        obj[key] = Numbers.normalize(+obj[key], min, max);
+      array.map((obj) => {
+        obj[key] = Numbers.normalizeToRange(
+          +obj[key],
+          min,
+          max,
+          newMin,
+          newMax
+        );
       });
     });
 
@@ -97,15 +107,18 @@ export class ArraysObjective extends Arrays {
 
   /**
    * Normalize all the values in an object array associated with keys which have numerical value pairs
-   * between 0 and 1 based on the minimums and maximums contained in the object array by those keys.
+   * between 0 and 1 or a custom range based on the minimums and maximums contained in the object array
+   * by those keys.
    * @param {Array} array A an array containing objects.
+   * @param {Number} newMin (Optional) A custom minimum value to normalize to.
+   * @param {Number} newMax (Optional) A custom maximum value to normalize to.
    * @returns {Array} The modified object array.
    */
-  static normalizeAuto(array) {
+  static normalizeAuto(array, newMin = 0, newMax = 1) {
     const keys = Object.keys(array[0]);
     const newKeys = [];
 
-    keys.map(key => {
+    keys.map((key) => {
       if (Number.isNaN(+array[0][key])) {
         // nothing
       } else {
@@ -113,12 +126,18 @@ export class ArraysObjective extends Arrays {
       }
     });
 
-    newKeys.map(key => {
+    newKeys.map((key) => {
       const max = this.max(array, key);
       const min = this.min(array, key);
 
-      array.map(obj => {
-        obj[key] = Numbers.normalize(+obj[key], min, max);
+      array.map((obj) => {
+        obj[key] = Numbers.normalizeToRange(
+          +obj[key],
+          min,
+          max,
+          newMin,
+          newMax
+        );
       });
     });
 
@@ -142,7 +161,7 @@ export class ArraysObjective extends Arrays {
 
     // create the tree array
     const treeData = [];
-    array.forEach(node => {
+    array.forEach((node) => {
       // add to parent
       const parent = dataMap[node[parentKey]];
       if (parent) {

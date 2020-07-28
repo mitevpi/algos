@@ -5,8 +5,30 @@ const states = [
   { population: 20, size: 20, state: "KY", near: "TN" },
   { population: 60, size: 20, state: "IN", near: "PA" },
   { population: 40, size: 13, state: "PA", near: "NY" },
-  { population: "break", size: "test", state: "PA", near: "NY" }
+  { population: "break", size: "test", state: "PA", near: "NY" },
 ];
+
+function expectCustomRange(res) {
+  expect(res[0].population).toBe(-10);
+  expect(res[1].population).toBe(12);
+  expect(res[2].population).toBe(100);
+  expect(res[3].population).toBe(56);
+  expect(res[0].size).toBe(-10);
+  expect(res[1].size).toBe(100);
+  expect(res[2].size).toBe(100);
+  expect(res[3].size).toBe(-10);
+}
+
+function expectStandardRange(res) {
+  expect(res[0].population).toBe(0);
+  expect(res[1].population).toBe(0.2);
+  expect(res[2].population).toBe(1);
+  expect(res[3].population).toBe(0.6);
+  expect(res[0].size).toBe(0);
+  expect(res[1].size).toBe(1);
+  expect(res[2].size).toBe(1);
+  expect(res[3].size).toBe(0);
+}
 
 test("import ArraysObjective", () => {
   expect.anything(ArraysObjective);
@@ -40,28 +62,37 @@ test("ArraysObjective.normalizeByKey", () => {
   expect(res[3].population).toBe(0.6);
 });
 
+test("ArraysObjective.normalizeByKey custom range", () => {
+  const res = ArraysObjective.normalizeByKey(states, "population", -10, 100);
+  expect(res[0].population).toBe(-10);
+  expect(res[1].population).toBe(12);
+  expect(res[2].population).toBe(100);
+  expect(res[3].population).toBe(56);
+});
+
 test("ArraysObjective.normalizeByKeys", () => {
   const res = ArraysObjective.normalizeByKeys(states, ["population", "size"]);
-  expect(res[0].population).toBe(0);
-  expect(res[1].population).toBe(0.2);
-  expect(res[2].population).toBe(1);
-  expect(res[3].population).toBe(0.6);
-  expect(res[0].size).toBe(0);
-  expect(res[1].size).toBe(1);
-  expect(res[2].size).toBe(1);
-  expect(res[3].size).toBe(0);
+  expectStandardRange(res);
+});
+
+test("ArraysObjective.normalizeByKeys custom range", () => {
+  const res = ArraysObjective.normalizeByKeys(
+    states,
+    ["population", "size"],
+    -10,
+    100
+  );
+  expectCustomRange(res);
 });
 
 test("ArraysObjective.normalizeAuto", () => {
   const res = ArraysObjective.normalizeAuto(states);
-  expect(res[0].population).toBe(0);
-  expect(res[1].population).toBe(0.2);
-  expect(res[2].population).toBe(1);
-  expect(res[3].population).toBe(0.6);
-  expect(res[0].size).toBe(0);
-  expect(res[1].size).toBe(1);
-  expect(res[2].size).toBe(1);
-  expect(res[3].size).toBe(0);
+  expectStandardRange(res);
+});
+
+test("ArraysObjective.normalizeAuto custom range", () => {
+  const res = ArraysObjective.normalizeAuto(states, -10, 100);
+  expectCustomRange(res);
 });
 
 test("ArraysObjective.sortBy", () => {

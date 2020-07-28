@@ -1,6 +1,6 @@
 {
   "name": "@mitevpi/algos",
-  "version": "0.0.10",
+  "version": "0.2.0",
   "description": "Low-level algorithms for data processing and manipulation.",
   "license": "MIT",
   "repository": "mitevpi/algos",
@@ -21,7 +21,7 @@
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "postcoverage": "open-cli coverage/lcov-report/index.html",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "docs": "documentation build src/index.js -f md -o docs/README.md && documentation build src/** -f html -o docs",
     "postdocs": "",
     "clean": "rimraf dist",

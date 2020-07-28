@@ -31,4 +31,21 @@ export class Numbers {
   static normalize(val, min, max) {
     return (val - min) / (max - min);
   }
+
+  /**
+   * Normalize a number between a custom range (max,min) based on a known minimum and maximum value
+   * of the original dataset.
+   * @param {Number} val The value to normalize.
+   * @param {Number} minOriginal The minimum extent in the original range.
+   * @param {Number} maxOriginal The maximum extent in the original range.
+   * @param {Number} minNew The minimum extent in the new, custom range.
+   * @param {Number} maxNew The maximum extent in the new, custom range.
+   * @returns {Number}
+   */
+  static normalizeToRange(val, minOriginal, maxOriginal, minNew, maxNew) {
+    return (
+      ((val - minOriginal) * (maxNew - minNew)) / (maxOriginal - minOriginal) +
+      minNew
+    );
+  }
 }

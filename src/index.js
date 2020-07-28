@@ -23,3 +23,18 @@ export { ArraysNumerical } from "./api/ArraysNumerical";
  * @property {Strings}
  */
 export { Strings } from "./api/Strings";
+/**
+ * Class for working with Cyrillic string data.
+ * @property {StringsCyrillic}
+ */
+export { StringsCyrillic } from "./api/StringsCyrillic";
+/**
+ * Class for working with Latin string data.
+ * @property {StringsLatin}
+ */
+export { StringsLatin } from "./api/StringsLatin";
+/**
+ * Class for creating mock data for algorithm/visualization testing.
+ * @property {MockData}
+ */
+export { MockData } from "./api/MockData";
