@@ -38,3 +38,9 @@ export { StringsLatin } from "./api/StringsLatin";
  * @property {MockData}
  */
 export { MockData } from "./api/MockData";
+
+/**
+ * Class for sorting arrays containing numerical data.
+ * @property {Sort}
+ */
+export { Sort } from "./api/Algorithms/Sort";

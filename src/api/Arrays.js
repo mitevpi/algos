@@ -8,7 +8,7 @@ export class Arrays {
    */
   static summarize(array) {
     const returnObj = {};
-    array.map(p => {
+    array.map((p) => {
       returnObj[p] == null ? (returnObj[p] = 1) : (returnObj[p] += 1);
     });
     return returnObj;

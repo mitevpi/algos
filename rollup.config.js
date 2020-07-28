@@ -5,8 +5,8 @@ module.exports = {
   // plugins: []
   plugins: [
     minify({
-      comments: false
+      comments: false,
       // Options for babel-minify.
-    })
-  ]
+    }),
+  ],
 };

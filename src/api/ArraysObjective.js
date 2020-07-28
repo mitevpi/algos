@@ -19,8 +19,8 @@ export class ArraysObjective extends Arrays {
   /**
    * Sort an array of objects with similar properties by a shared key's value.
    * @param {Object[]} array An array of objects with similar properties.
-   * @param {String} key The unique key to sort by.
-   * @param {Boolean} descending Whether to sort descending (default), or ascending.
+   * @param {String} key The unique key to merge by.
+   * @param {Boolean} descending Whether to merge descending (default), or ascending.
    * @returns {Object[]} Array of objects sorted by the key's value across occurrences.
    */
   static sortBy(array, key, descending = true) {

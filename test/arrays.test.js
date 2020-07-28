@@ -22,7 +22,7 @@ test("Arrays.flatten", () => {
 
   const array01 = [
     [1, 2, 3],
-    [4, 5, 7]
+    [4, 5, 7],
   ];
   const array02 = [[[1, 2, 3]], [4, 5, 7]];
   const array03 = [[[1, 2, 3]], [[4, 5, 7]]];
