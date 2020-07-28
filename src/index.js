@@ -39,8 +39,22 @@ export { StringsLatin } from "./api/StringsLatin";
  */
 export { MockData } from "./api/MockData";
 
+// ALGORITHMS
+
 /**
  * Class for sorting arrays containing numerical data.
  * @property {Sort}
  */
 export { Sort } from "./api/Algorithms/Sort";
+
+// DATA STRUCTURES
+/**
+ * Stack data structure.
+ * @property {Stack}
+ */
+export { Stack } from "./api/Data Structures/Stack";
+/**
+ * Queue data structure.
+ * @property {Queue}
+ */
+export { Queue } from "./api/Data Structures/Queue";

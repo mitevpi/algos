@@ -76,6 +76,14 @@
         -   [Parameters][72]
     -   [quickSort][73]
         -   [Parameters][74]
+-   [Stack][75]
+    -   [length][76]
+    -   [push][77]
+        -   [Parameters][78]
+    -   [pop][79]
+    -   [peek][80]
+    -   [isEmpty][81]
+-   [Queue][82]
 
 ## Numbers
 
@@ -87,10 +95,10 @@ Get a random integer between the given range.
 
 #### Parameters
 
--   `min` **[Number][75]** Minimum extent.
--   `max` **[Number][75]** Maximum extent.
+-   `min` **[Number][83]** Minimum extent.
+-   `max` **[Number][83]** Maximum extent.
 
-Returns **[Number][75]** The random integer between the min and max input.
+Returns **[Number][83]** The random integer between the min and max input.
 
 ### randomFloat
 
@@ -98,10 +106,10 @@ Get a random float between the given range.
 
 #### Parameters
 
--   `min` **[Number][75]** Minimum extent.
--   `max` **[Number][75]** Maximum extent.
+-   `min` **[Number][83]** Minimum extent.
+-   `max` **[Number][83]** Maximum extent.
 
-Returns **[Number][75]** The random float between the min and max input.
+Returns **[Number][83]** The random float between the min and max input.
 
 ### normalize
 
@@ -109,11 +117,11 @@ Normalize a number between 0 and 1 based on a known minimum and maximum value.
 
 #### Parameters
 
--   `val` **[Number][75]** The value to normalize.
--   `min` **[Number][75]** Minimum extent.
--   `max` **[Number][75]** Maximum extent.
+-   `val` **[Number][83]** The value to normalize.
+-   `min` **[Number][83]** Minimum extent.
+-   `max` **[Number][83]** Maximum extent.
 
-Returns **[Number][75]** The random float between the min and max input.
+Returns **[Number][83]** The random float between the min and max input.
 
 ### normalizeToRange
 
@@ -122,13 +130,13 @@ of the original dataset.
 
 #### Parameters
 
--   `val` **[Number][75]** The value to normalize.
--   `minOriginal` **[Number][75]** The minimum extent in the original range.
--   `maxOriginal` **[Number][75]** The maximum extent in the original range.
--   `minNew` **[Number][75]** The minimum extent in the new, custom range.
--   `maxNew` **[Number][75]** The maximum extent in the new, custom range.
+-   `val` **[Number][83]** The value to normalize.
+-   `minOriginal` **[Number][83]** The minimum extent in the original range.
+-   `maxOriginal` **[Number][83]** The maximum extent in the original range.
+-   `minNew` **[Number][83]** The minimum extent in the new, custom range.
+-   `maxNew` **[Number][83]** The maximum extent in the new, custom range.
 
-Returns **[Number][75]** 
+Returns **[Number][83]** 
 
 ## Arrays
 
@@ -141,9 +149,9 @@ within the array.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array of values (string, number).
+-   `array` **[Array][84]** A an array of values (string, number).
 
-Returns **[Object][77]** Object containing the unique keys of the array, and
+Returns **[Object][85]** Object containing the unique keys of the array, and
 counts of occurrence in the source array.
 
 ### chunk
@@ -152,10 +160,10 @@ Chunk one flat array into a series of arrays of a certain size.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array of values (string, number, etc.).
--   `size` **[Number][75]** The size of chunks to split the array into.
+-   `array` **[Array][84]** A an array of values (string, number, etc.).
+-   `size` **[Number][83]** The size of chunks to split the array into.
 
-Returns **[Array][76]&lt;[Array][76]>** An array containing arrays of the specified size, containing
+Returns **[Array][84]&lt;[Array][84]>** An array containing arrays of the specified size, containing
 the original data from the flat array.
 
 ### flatten
@@ -164,10 +172,10 @@ Flattens n-nested arrays into one array of values.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing arrays nested to any amount (n).
+-   `array` **[Array][84]** A an array containing arrays nested to any amount (n).
 -   `result`   (optional, default `[]`)
 
-Returns **[Array][76]** A flat array of values/objects extracted from the nested arrays.
+Returns **[Array][84]** A flat array of values/objects extracted from the nested arrays.
 
 ## ArraysObjective
 
@@ -179,10 +187,10 @@ Group an array of objects by similar properties.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Object][77]>** An array of objects with similar properties.
--   `key` **[String][78]** The unique key to group by.
+-   `array` **[Array][84]&lt;[Object][85]>** An array of objects with similar properties.
+-   `key` **[String][86]** The unique key to group by.
 
-Returns **[Object][77]** Object containing child objects which contain the individual
+Returns **[Object][85]** Object containing child objects which contain the individual
 data points corresponding to the property key used for grouping.
 
 ### sortBy
@@ -191,11 +199,11 @@ Sort an array of objects with similar properties by a shared key's value.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Object][77]>** An array of objects with similar properties.
--   `key` **[String][78]** The unique key to merge by.
--   `descending` **[Boolean][79]** Whether to merge descending (default), or ascending. (optional, default `true`)
+-   `array` **[Array][84]&lt;[Object][85]>** An array of objects with similar properties.
+-   `key` **[String][86]** The unique key to merge by.
+-   `descending` **[Boolean][87]** Whether to merge descending (default), or ascending. (optional, default `true`)
 
-Returns **[Array][76]&lt;[Object][77]>** Array of objects sorted by the key's value across occurrences.
+Returns **[Array][84]&lt;[Object][85]>** Array of objects sorted by the key's value across occurrences.
 
 ### min
 
@@ -203,10 +211,10 @@ Get the minimum value of a key in an array containing objects with that key.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing objects.
--   `key` **[String][78]** A key which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][84]** A an array containing objects.
+-   `key` **[String][86]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][75]** The minimum value of all the keys in the object array.
+Returns **[Number][83]** The minimum value of all the keys in the object array.
 
 ### max
 
@@ -214,10 +222,10 @@ Get the maximum value of a key in an array containing objects with that key.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing objects.
--   `key` **[String][78]** A key which exists in the objects in the array, with associated numerical values.
+-   `array` **[Array][84]** A an array containing objects.
+-   `key` **[String][86]** A key which exists in the objects in the array, with associated numerical values.
 
-Returns **[Number][75]** The maximum value of all the keys in the object array.
+Returns **[Number][83]** The maximum value of all the keys in the object array.
 
 ### normalizeByKey
 
@@ -226,12 +234,12 @@ based on the minimums and maximums contained in the object array by that key.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing objects.
--   `key` **[String][78]** A key which exists in the objects in the array, with associated numerical values.
--   `newMin` **[Number][75]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
--   `newMax` **[Number][75]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
+-   `array` **[Array][84]** A an array containing objects.
+-   `key` **[String][86]** A key which exists in the objects in the array, with associated numerical values.
+-   `newMin` **[Number][83]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
+-   `newMax` **[Number][83]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
 
-Returns **[Array][76]** The modified object array.
+Returns **[Array][84]** The modified object array.
 
 ### normalizeByKeys
 
@@ -240,12 +248,12 @@ based on the minimums and maximums contained in the object array by those keys.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing objects.
--   `keys` **[Array][76]&lt;[String][78]>** An array of keys which exists in the objects in the array, with associated numerical values.
--   `newMin` **[Number][75]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
--   `newMax` **[Number][75]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
+-   `array` **[Array][84]** A an array containing objects.
+-   `keys` **[Array][84]&lt;[String][86]>** An array of keys which exists in the objects in the array, with associated numerical values.
+-   `newMin` **[Number][83]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
+-   `newMax` **[Number][83]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
 
-Returns **[Array][76]** The modified object array.
+Returns **[Array][84]** The modified object array.
 
 ### normalizeAuto
 
@@ -255,11 +263,11 @@ by those keys.
 
 #### Parameters
 
--   `array` **[Array][76]** A an array containing objects.
--   `newMin` **[Number][75]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
--   `newMax` **[Number][75]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
+-   `array` **[Array][84]** A an array containing objects.
+-   `newMin` **[Number][83]** (Optional) A custom minimum value to normalize to. (optional, default `0`)
+-   `newMax` **[Number][83]** (Optional) A custom maximum value to normalize to. (optional, default `1`)
 
-Returns **[Array][76]** The modified object array.
+Returns **[Array][84]** The modified object array.
 
 ### hierarchyFromFlat
 
@@ -268,11 +276,11 @@ hierarchy based on parent/child keys. ex. Folders, File Versions, etc.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Object][77]>** A an array of objects.
--   `parentKey` **[String][78]** The common property of the objects to establish primary identity.
--   `childKey` **[String][78]** The common property of the objects to establish parent -> child relationships.
+-   `array` **[Array][84]&lt;[Object][85]>** A an array of objects.
+-   `parentKey` **[String][86]** The common property of the objects to establish primary identity.
+-   `childKey` **[String][86]** The common property of the objects to establish parent -> child relationships.
 
-Returns **[Array][76]&lt;[Object][77]>** An array of objects, nested using the .children accessor based on the
+Returns **[Array][84]&lt;[Object][85]>** An array of objects, nested using the .children accessor based on the
 parent -> child hierarchy established.
 
 ## ArraysNumerical
@@ -285,9 +293,9 @@ Sum the values of an array.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** A an array of values to sum.
+-   `array` **[Array][84]&lt;[Number][83]>** A an array of values to sum.
 
-Returns **[Number][75]** The sum of values in the array.
+Returns **[Number][83]** The sum of values in the array.
 
 ### max
 
@@ -295,9 +303,9 @@ Get the maximum value in the array.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** A an array of numerical values.
+-   `array` **[Array][84]&lt;[Number][83]>** A an array of numerical values.
 
-Returns **[Number][75]** The maximum of the values in the array.
+Returns **[Number][83]** The maximum of the values in the array.
 
 ### min
 
@@ -305,9 +313,9 @@ Get the minimum value in the array.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** A an array of numerical values.
+-   `array` **[Array][84]&lt;[Number][83]>** A an array of numerical values.
 
-Returns **[Number][75]** The minimum of the values in the array.
+Returns **[Number][83]** The minimum of the values in the array.
 
 ## Strings
 
@@ -319,9 +327,9 @@ Check whether a string is null/empty and return a workable string.
 
 #### Parameters
 
--   `str` **[String][78]** The string to check for null/empty.
+-   `str` **[String][86]** The string to check for null/empty.
 
-Returns **[String][78]** A full or empty string.
+Returns **[String][86]** A full or empty string.
 
 ### removeNonPrintable
 
@@ -329,9 +337,9 @@ Remove non-printable (non-ASCII) characters from a string.
 
 #### Parameters
 
--   `str` **[String][78]** The string to clean of non-printable characters.
+-   `str` **[String][86]** The string to clean of non-printable characters.
 
-Returns **[String][78]** String without the non-ASCII characters.
+Returns **[String][86]** String without the non-ASCII characters.
 
 ### removeNonPathable
 
@@ -339,15 +347,15 @@ Remove non-pathable characters from a string.
 
 #### Parameters
 
--   `str` **[String][78]** The string to clean of non-pathable characters.
+-   `str` **[String][86]** The string to clean of non-pathable characters.
 
-Returns **[String][78]** String without the path-breaking characters.
+Returns **[String][86]** String without the path-breaking characters.
 
 ### createUniqueID
 
 Create a random, unique identifier string.
 
-Returns **[String][78]** A random string with alpha-numeric characters.
+Returns **[String][86]** A random string with alpha-numeric characters.
 
 ## StringsCyrillic
 
@@ -383,9 +391,9 @@ Remove non-alpha-numeric characters from a string.
 
 #### Parameters
 
--   `str` **[String][78]** The string to clean of non-alpha-numeric characters.
+-   `str` **[String][86]** The string to clean of non-alpha-numeric characters.
 
-Returns **[String][78]** String without characters that aren't letters or numbers.
+Returns **[String][86]** String without characters that aren't letters or numbers.
 
 ### removeNonAlpha
 
@@ -393,9 +401,9 @@ Remove non-alphabetic characters from a string.
 
 #### Parameters
 
--   `str` **[String][78]** The string to clean of non-alphabetic characters.
+-   `str` **[String][86]** The string to clean of non-alphabetic characters.
 
-Returns **[String][78]** String with characters which are only EN letters.
+Returns **[String][86]** String with characters which are only EN letters.
 
 ## MockData
 
@@ -407,9 +415,9 @@ Get a filled array of the corresponding size.
 
 #### Parameters
 
--   `size` **[Number][75]** The amount of numbers in the array.
+-   `size` **[Number][83]** The amount of numbers in the array.
 
-Returns **[Array][76]&lt;[Number][75]>** A filled array the length of the specified size.
+Returns **[Array][84]&lt;[Number][83]>** A filled array the length of the specified size.
 
 ### packData
 
@@ -419,7 +427,7 @@ Create mock data for a circle-packing algorithm.
 
 -   `size`  The amount of data points to create
 
-Returns **[Array][76]&lt;{r: [number][75], spaceType: ([string][78]), id: [Number][75]}>** An array of objects which
+Returns **[Array][84]&lt;{r: [number][83], spaceType: ([string][86]), id: [Number][83]}>** An array of objects which
 can be used as circles in circle-packing algorithm testing.
 
 ### networkData
@@ -430,7 +438,7 @@ Create mock data for a network/graph algorithm.
 
 -   `size`  The amount of data points to create
 
-Returns **{nodes: [Array][76]&lt;{size: [Number][75], x: null, y: null}>, links: [Array][76]&lt;{source: [number][75], target: [number][75]}>}** An array
+Returns **{nodes: [Array][84]&lt;{size: [Number][83], x: null, y: null}>, links: [Array][84]&lt;{source: [number][83], target: [number][83]}>}** An array
 of objects which can be used as nodes and connections in network/graph algorithm testing scenarios.
 
 ## Sort
@@ -446,9 +454,9 @@ until there is no more swapping necessary.
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** An array of numbers to merge.
+-   `array` **[Array][84]&lt;[Number][83]>** An array of numbers to merge.
 
-Returns **[Array][76]&lt;[Number][75]>** An array of sorted numbers.
+Returns **[Array][84]&lt;[Number][83]>** An array of sorted numbers.
 
 ### insertionSort
 
@@ -459,9 +467,9 @@ in some particular order. The analogy can be understood from the style we arrang
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** An array of numbers to merge.
+-   `array` **[Array][84]&lt;[Number][83]>** An array of numbers to merge.
 
-Returns **[Array][76]&lt;[Number][75]>** An array of sorted numbers.
+Returns **[Array][84]&lt;[Number][83]>** An array of sorted numbers.
 
 ### mergeSort
 
@@ -472,9 +480,9 @@ into play and combines the sorted arrays into larger arrays until the whole arra
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** An array of numbers to merge.
+-   `array` **[Array][84]&lt;[Number][83]>** An array of numbers to merge.
 
-Returns **[Array][76]&lt;[Number][75]>** An array of sorted numbers.
+Returns **[Array][84]&lt;[Number][83]>** An array of sorted numbers.
 
 ### quickSort
 
@@ -484,9 +492,51 @@ the picked pivot. There are many different versions of quickSort that pick pivot
 
 #### Parameters
 
--   `array` **[Array][76]&lt;[Number][75]>** An array of numbers to merge.
+-   `array` **[Array][84]&lt;[Number][83]>** An array of numbers to merge.
 
-Returns **[Array][76]&lt;[Number][75]>** An array of sorted numbers.
+Returns **[Array][84]&lt;[Number][83]>** An array of sorted numbers.
+
+## Stack
+
+Stack data structure.
+
+### length
+
+Get the count of the number of items in the stack.
+
+Returns **[number][83]** The number of items in the stack.
+
+### push
+
+Add an item to the top of the stack.
+
+#### Parameters
+
+-   `item`  The item to add to the stack.
+
+Returns **[number][83]** The new size of the stack.
+
+### pop
+
+Remove the top item from the stack.
+
+Returns **any** 
+
+### peek
+
+Get the item at the top of the stack, without removing it.
+
+Returns **any** The item at the top of the stack.
+
+### isEmpty
+
+Whether or not the stack is empty.
+
+Returns **[boolean][87]** Whether or not the stack is empty.
+
+## Queue
+
+Queue data structure.
 
 [1]: #numbers
 
@@ -636,12 +686,28 @@ Returns **[Array][76]&lt;[Number][75]>** An array of sorted numbers.
 
 [74]: #parameters-31
 
-[75]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[75]: #stack
 
-[76]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[76]: #length
 
-[77]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[77]: #push
 
-[78]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[78]: #parameters-32
 
-[79]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[79]: #pop
+
+[80]: #peek
+
+[81]: #isempty
+
+[82]: #queue
+
+[83]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[84]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[85]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[86]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[87]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
